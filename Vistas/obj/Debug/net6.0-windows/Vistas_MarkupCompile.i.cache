@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\obj\Debug\net6.0-windows\
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\
 Vistas
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\App.xaml
-2-28123400
+D:\Projects\NMA_Project\Vistas\App.xaml
+3-1535474449
 
-6-189387712
-2301235835286
-Administrador.xaml;MainWindow.xaml;
+7-1578074836
+230-1736216989
+Administrador.xaml;MainWindow.xaml;Profesional.xaml;
 
-True
+False
 
