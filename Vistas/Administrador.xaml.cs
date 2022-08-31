@@ -11,13 +11,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace Vistas
 {
     /// <summary>
     /// Lógica de interacción para Administrador.xaml
     /// </summary>
-    public partial class Administrador : Window
+    public partial class Administrador : MetroWindow
     {
         public Administrador()
         {

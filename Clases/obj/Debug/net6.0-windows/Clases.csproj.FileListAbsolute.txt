@@ -1,0 +1,12 @@
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\bin\Debug\net6.0-windows\Clases.deps.json
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\bin\Debug\net6.0-windows\Clases.dll
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\bin\Debug\net6.0-windows\Clases.pdb
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\Clases.csproj.AssemblyReference.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\Clases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\Clases.AssemblyInfoInputs.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\Clases.AssemblyInfo.cs
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\Clases.csproj.CoreCompileInputs.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\Clases.dll
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\refint\Clases.dll
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\Clases.pdb
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Clases\obj\Debug\net6.0-windows\ref\Clases.dll
