@@ -1,4 +1,5 @@
-﻿<Window x:Class="Vistas.Administrador"
+﻿<mah:MetroWindow x:Class="Vistas.Administrador"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,6 +8,7 @@
         mc:Ignorable="d"
         Title="Administrador" Height="450" Width="800">
     <Grid>
-        
+        <Separator HorizontalAlignment="Left" Margin="184,284,0,0" VerticalAlignment="Top" Height="42" Width="55"/>
+        <Image Margin="184,107,561,277" Source="/Recursos/Iconos/icons8-add-50.png" Stretch="Fill"/>
     </Grid>
-</Window>
+</mah:MetroWindow>
