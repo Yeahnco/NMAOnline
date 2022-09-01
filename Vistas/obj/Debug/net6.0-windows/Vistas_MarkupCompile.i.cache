@@ -4,26 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\obj\Debug\net6.0-windows\
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\
 Vistas
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-<<<<<<< HEAD
 D:\Projects\NMA_Project\Vistas\App.xaml
 41760557471
 
 8542488486
 230-1736216989
 Administrador.xaml;MainWindow.xaml;Profesional.xaml;test.xaml;
-=======
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\App.xaml
-3-1535474449
 
-7-1578074836
-2301235835286
-Administrador.xaml;MainWindow.xaml;Profesional.xaml;
->>>>>>> 6e06ddc5891a9df05ba988e76b15fe24508aee39
-
-False
+True
 
