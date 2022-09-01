@@ -6,6 +6,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vistas"
         mc:Ignorable="d"
+        Window.WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="White"
         Title="MainWindow" Height="450" Width="694">
     <Grid Margin="10,0,0,0">
         <Label x:Name="labelUsuario" Content="Usuario:" HorizontalAlignment="Left" Margin="397,132,0,0" VerticalAlignment="Top" Height="33" FontWeight="Bold" FontSize="16" FontFamily="Calibri"/>
@@ -14,11 +18,13 @@
         <Label HorizontalAlignment="Left" Margin="78,148,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" Height="112" Width="191" FontSize="72"/>
         <Button x:Name="botonIngresar" Content="INGRESAR" HorizontalAlignment="Left" Margin="397,309,0,0" VerticalAlignment="Top" Width="250" Height="35" Foreground="White" FontSize="8" FontFamily="Calibri" Click="botonIngresar_Click" Background="#FF4E16D1"/>
         <Label x:Name="olvContrLabel" Content="¿Olvidaste tu contraseña?" HorizontalAlignment="Left" Margin="553,349,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="9"/>
-        <TextBox x:Name="usuarioLogin" HorizontalAlignment="Left" Margin="402,170,0,0" TextWrapping="Wrap" mah:TextBoxHelper.Watermark="Ingresa tu usuario" VerticalAlignment="Top" Width="245" Height="34"/>
-        <TextBox x:Name="contrasenaLogin" HorizontalAlignment="Left" Margin="402,251,0,0" TextWrapping="Wrap" mah:TextBoxHelper.Watermark="Ingresa tu contraseña" VerticalAlignment="Top" Width="245" Height="34"/>
+        <TextBox x:Name="usuarioLogin" HorizontalAlignment="Left" Margin="402,170,0,0" TextWrapping="Wrap" mah:TextBoxHelper.Watermark="Ingresa tu usuario" VerticalAlignment="Top" Width="245" Height="34" FontSize="16"/>
         <Image Source="/Recursos/maxresdefault.jpg" Stretch="Fill" Margin="0,10,306,10"/>
         <Label Content="NMA" HorizontalAlignment="Left" Margin="100,148,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" Height="112" Width="192" FontSize="72"/>
-        <Image Margin="16,112,74,100" Source="/Recursos/pngegg.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="Sombra" Margin="152,164,48,158" Source="/Recursos/pngegg.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.7"/>
+            </Image.OpacityMask>
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -28,6 +34,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <PasswordBox x:Name="contrasenaLogin" mah:TextBoxHelper.Watermark="Ingresa tu contraseña" HorizontalAlignment="Left" Margin="402,251,0,0" VerticalAlignment="Top" Width="245" Height="31" FontSize="16"/>
 
     </Grid>
 </mah:MetroWindow>

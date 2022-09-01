@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Runtime.InteropServices;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 
@@ -33,13 +34,13 @@ namespace Vistas
 
         private async void ValidarLogin()
         {
-            if (usuarioLogin.Text.Equals(username) && contrasenaLogin.Text.Equals(password))
+            if (usuarioLogin.Text.Equals(username) && contrasenaLogin.Password.Equals(password))
             {
                 Administrador admini = new Administrador();
                 this.Close();
                 admini.ShowDialog();
             }
-            else if (usuarioLogin.Text.Equals(exampleUserProfesional) && contrasenaLogin.Text.Equals(examplePasswordProfesional))
+            else if (usuarioLogin.Text.Equals(exampleUserProfesional) && contrasenaLogin.Password.Equals(examplePasswordProfesional))
             {
                 Profesional prof = new Profesional();
                 this.Close();

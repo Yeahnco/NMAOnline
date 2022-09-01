@@ -126,3 +126,7 @@ D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Profesional.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Profesional.baml
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\test.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\test.baml
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\obj\Debug\net6.0-windows\Profesional.g.cs
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\obj\Debug\net6.0-windows\test.g.cs
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\obj\Debug\net6.0-windows\Profesional.baml
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\obj\Debug\net6.0-windows\test.baml
