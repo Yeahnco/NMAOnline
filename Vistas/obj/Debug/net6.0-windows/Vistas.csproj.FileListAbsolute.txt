@@ -124,3 +124,5 @@ D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Vistas.genruntimeconfig.
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\ref\Vistas.dll
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Profesional.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Profesional.baml
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\test.g.cs
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\test.baml
