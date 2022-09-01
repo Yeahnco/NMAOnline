@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Recursos\Iconos\GRIS\icons8-user-groups-50.png" />
     <None Remove="Recursos\Iconos\icons8-add-50.png" />
     <None Remove="Recursos\Iconos\icons8-add-male-user-50.png" />
     <None Remove="Recursos\Iconos\icons8-ball-point-pen-50.png" />
@@ -20,11 +21,14 @@
     <None Remove="Recursos\Iconos\icons8-toggle-off-50.png" />
     <None Remove="Recursos\Iconos\icons8-toggle-on-50.png" />
     <None Remove="Recursos\Iconos\icons8-user-groups-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-user-groups-50.png" />
     <None Remove="Recursos\maxresdefault.jpg" />
     <None Remove="Recursos\pngegg.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Recursos\Iconos\GRIS\icons8-user-groups-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-user-groups-50.png" />
     <Resource Include="Recursos\pngegg.png" />
   </ItemGroup>
 
