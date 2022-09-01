@@ -10,12 +10,24 @@
     <Compile Update="Administrador.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Profesional.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="test.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Administrador.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Profesional.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="test.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
