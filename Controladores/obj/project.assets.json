@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "autosize/3.0.8": {
+        "type": "package"
+      },
       "ControlzEx/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -286,6 +289,19 @@
     }
   },
   "libraries": {
+    "autosize/3.0.8": {
+      "sha512": "7xDsEMsW/OISvkBcwO+LBAgEoDv3ig6DTkXhUzr0HbfI57CQqZL7ZagNwOCIp0Ll7SfvRAesOqxtSAjXGkp+FQ==",
+      "type": "package",
+      "path": "autosize/3.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autosize.3.0.8.nupkg.sha512",
+        "autosize.nuspec",
+        "content/Scripts/autosize.js",
+        "content/Scripts/autosize.min.js"
+      ]
+    },
     "ControlzEx/4.4.0": {
       "sha512": "pZ5z4hYWwE4R13UMCVs6vII//nL7hz+Nwn4oJlnsZJRGqJNy6Z9KnJiTZfly6lKFu0pMc1aWBZpx+VqFTQKP1Q==",
       "type": "package",
@@ -1223,7 +1239,8 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "MahApps.Metro >= 2.4.9",
-      "MahApps.Metro.IconPacks >= 4.11.0"
+      "MahApps.Metro.IconPacks >= 4.11.0",
+      "autosize >= 3.0.8"
     ]
   },
   "packageFolders": {
@@ -1278,6 +1295,10 @@
           "MahApps.Metro.IconPacks": {
             "target": "Package",
             "version": "[4.11.0, )"
+          },
+          "autosize": {
+            "target": "Package",
+            "version": "[3.0.8, )"
           }
         },
         "imports": [
@@ -1302,5 +1323,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché D:\\Projects\\NMA_Project\\Controladores\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

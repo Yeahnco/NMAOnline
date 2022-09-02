@@ -1,14 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "sdB6fefQlbnPi4cgN1t/esYD63rcpYhgquoOUz+Pk3nIYzs+pow7CRPucmTsYXaiKWd69RxTOmnqvHYtACtr4w==",
+  "dgSpecHash": "ZFYvgjMkz0ZHi/mcudeUuSbTo53orqnmn4rohNrSYYzD2clsEuO2WdChTb/RILpQeE3N/I5qirjDYjfpYQ2bdg==",
   "success": true,
   "projectFilePath": "D:\\Projects\\NMA_Project\\Vistas\\Vistas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\diego\\.nuget\\packages\\autosize\\3.0.8\\autosize.3.0.8.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché D:\\Projects\\NMA_Project\\Vistas\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
