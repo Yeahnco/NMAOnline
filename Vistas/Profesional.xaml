@@ -1,5 +1,4 @@
-﻿<mah:MetroWindow 
-                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"         
+﻿<mah:MetroWindow xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,10 +7,12 @@
                  xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="Vistas.Profesional"
                  mc:Ignorable="d"
                  Title="PROFESIONAL" Height="500" Width="1000"
-                 WindowStyle="None"
                  ResizeMode="NoResize"
-                 Background="Transparent"
-                 AllowsTransparency="True">
+                 Background="Transparent" 
+                 WindowStartupLocation="CenterScreen" 
+                 WindowStyle="None"
+                 ShowTitleBar="False"
+                 ShowCloseButton="False">
 
     <Border Background="White">
         <Grid>
@@ -73,6 +74,89 @@
                               Width="836" 
                               Margin="0,-40,0,0">
                             <Grid Margin="10,10,0,0">
+                                <TabControl x:Name="TabControlRevisionCliente" 
+                                            FontSize="12" 
+                                            mah:HeaderedControlHelper.HeaderFontSize="20" 
+                                            Margin="0,10,0,-85" 
+                                            FontWeight="SemiBold">
+                                    <TabControl.Background>
+                                        <SolidColorBrush Color="White" 
+                                                         Opacity="0"/>
+                                    </TabControl.Background>
+                                    <TabItem x:Name="TabitemRevisionCliente" 
+                                             Header="Cliente" 
+                                             FontSize="16" 
+                                             MinWidth="0" 
+                                             MinHeight="1" 
+                                             FontStretch="Expanded" 
+                                             mah:HeaderedControlHelper.HeaderFontSize="15" 
+                                             mah:HeaderedControlHelper.HeaderForeground="#FF4E16D1" 
+                                             mah:TabControlHelper.UnderlineBrush="#FF4E16D1" 
+                                             mah:TabControlHelper.UnderlineSelectedBrush="#FF4E16D1" 
+                                             mah:TabControlHelper.UnderlineMouseOverSelectedBrush="#FF4E16D1" 
+                                             mah:HeaderedControlHelper.HeaderFontWeight="SemiBold">
+                                        <TabItem.Background>
+                                            <SolidColorBrush Color="White" 
+                                                             Opacity="0"/>
+                                        </TabItem.Background>
+                                        <mah:TabControlHelper.UnderlineMouseOverBrush>
+                                            <LinearGradientBrush EndPoint="0.5,1" 
+                                                                 StartPoint="0.5,0">
+                                                <GradientStop Color="Black"/>
+                                                <GradientStop Color="#FF4E16D1" 
+                                                              Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </mah:TabControlHelper.UnderlineMouseOverBrush>
+                                        <Grid Margin="-4,0,38,48" 
+                                              Height="399" >
+                                            <Rectangle HorizontalAlignment="Center" 
+                                                       Height="100" 
+                                                       Margin="0,1,0,0" 
+                                                       Stroke="Black" 
+                                                       VerticalAlignment="Top" 
+                                                       Width="766" 
+                                                       OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
+                                            <Image Margin="-15,87,-17,258" 
+                                                   Source="/pngegg.png" 
+                                                   Stretch="Fill">
+                                                <Image.OpacityMask>
+                                                    <SolidColorBrush Color="Black" 
+                                                                     Opacity="0.6"/>
+                                                </Image.OpacityMask>
+                                            </Image>
+                                            <Rectangle HorizontalAlignment="Center" 
+                                                       Height="100" 
+                                                       Margin="0,115,0,0" 
+                                                       Stroke="Black" 
+                                                       VerticalAlignment="Top" 
+                                                       Width="766" 
+                                                       OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
+                                            <Image Margin="-16,201,-16,144" 
+                                                   Source="/pngegg.png" 
+                                                   Stretch="Fill">
+                                                <Image.OpacityMask>
+                                                    <SolidColorBrush Color="Black" 
+                                                                     Opacity="0.6"/>
+                                                </Image.OpacityMask>
+                                            </Image>
+                                            <Image Margin="-16,319,-16,26" 
+                                                   Source="/pngegg.png" 
+                                                   Stretch="Fill">
+                                                <Image.OpacityMask>
+                                                    <SolidColorBrush Color="Black" 
+                                                                     Opacity="0.6"/>
+                                                </Image.OpacityMask>
+                                            </Image>
+                                            <Rectangle HorizontalAlignment="Center" 
+                                                       Height="100" 
+                                                       Margin="0,233,0,0" 
+                                                       Stroke="Black" 
+                                                       VerticalAlignment="Top" 
+                                                       Width="766" 
+                                                       OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
+                                        </Grid>
+                                    </TabItem>
+                                </TabControl>
                             </Grid>
                         </Grid>
                     </TabItem>
@@ -108,7 +192,7 @@
                               Width="836" 
                               Margin="0,-40,0,0">
                             <Grid Margin="10,10,0,0">
-                                <TabControl x:Name="TabControlRevisionAct" 
+                                <TabControl x:Name="TabControlRevisarAct" 
                                             FontSize="12" 
                                             mah:HeaderedControlHelper.HeaderFontSize="20" 
                                             Margin="0,10,0,-85" 
@@ -117,7 +201,7 @@
                                         <SolidColorBrush Color="White" 
                                                          Opacity="0"/>
                                     </TabControl.Background>
-                                    <TabItem x:Name="TabitemRevisionAct" 
+                                    <TabItem x:Name="TabitemRevisarAct" 
                                              Header="Revision" 
                                              FontSize="16" 
                                              MinWidth="0" 
@@ -194,7 +278,7 @@
                             </Grid>
                         </Grid>
                     </TabItem>
-                    
+
                 </TabControl>
             </Grid>
             <Rectangle HorizontalAlignment="Left" Height="365" Margin="143,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="1" Opacity="0.085"/>

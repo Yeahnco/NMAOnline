@@ -8,9 +8,6 @@
         mc:Ignorable="d"
         Title="Administrador" Height="500" Width="1000">
     <Grid>
-
-
-
         <Grid Margin="0,0,0,437">
 
             <Image x:Name="Header" Source="/Recursos/maxresdefault.jpg" Stretch="Fill" UseLayoutRounding="False"/>
@@ -18,12 +15,10 @@
 
             <Image Margin="959,5,-4,5" Source="/Recursos/Iconos/BLANCO/icons8-exit-96.png"/>
         </Grid>
-
         <Grid Margin="10,97,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-
             <TabControl Margin="0,-50,10,10">
                 <TabControl.Background>
                     <ImageBrush/>

@@ -26,6 +26,7 @@ namespace Vistas
         public Profesional()
         {
             InitializeComponent();
+            this.WindowStyle = WindowStyle.None;
         }
     }
 }
