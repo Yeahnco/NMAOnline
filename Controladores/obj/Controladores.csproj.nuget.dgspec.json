@@ -47,6 +47,10 @@
             "MahApps.Metro.IconPacks": {
               "target": "Package",
               "version": "[4.11.0, )"
+            },
+            "autosize": {
+              "target": "Package",
+              "version": "[3.0.8, )"
             }
           },
           "imports": [

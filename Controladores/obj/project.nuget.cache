@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UGlWBac/k7o+uTiSXsgF1cQgg6Ph6HH1ck02LnwpwUXIiC6y6c88Z9H8N8LuSt5oXpf5/QSUwSUL10kNtD2Z3A==",
+  "dgSpecHash": "mEBWck8wZDf/zk8OZuJivvP8bTO1OibO72/rdw1fCCIh0OaWyUF7TcT1P3Z0gZlIZBJoenAE1nt1HjuLBBENrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Controladores\\Controladores.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jeaaa\\.nuget\\packages\\autosize\\3.0.8\\autosize.3.0.8.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",

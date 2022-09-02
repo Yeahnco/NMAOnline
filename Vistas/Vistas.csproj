@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="maxresdefault.jpg" />
     <None Remove="pngegg.png" />
+    <None Remove="Recursos\Blue Phone Wallpaper HD.jpg" />
     <None Remove="Recursos\Iconos\BLANCO\icons8-exit-96.png" />
     <None Remove="Recursos\Iconos\GRIS\icons8-add-50.png" />
     <None Remove="Recursos\Iconos\GRIS\icons8-add-male-user-50.png" />
@@ -52,6 +53,13 @@
     <None Remove="Recursos\Iconos\PURPURA\icons8-user-groups-50.png" />
     <None Remove="Recursos\maxresdefault.jpg" />
     <None Remove="Recursos\pngegg.png" />
+    <None Remove="Recursos\Premium Vector _ Modern tech purple background with abstract style.jfif" />
+    <None Remove="Recursos\Premium Vector _ Modern tech purple background with abstract style.jpg" />
+    <None Remove="Recursos\Titlebar3.jpg" />
+    <None Remove="Recursos\TitlebarRoug.jpg" />
+    <None Remove="Recursos\TitlebarRougblue.jpg" />
+    <None Remove="Recursos\Wallpapers Huawei Mate 9 - Pack 6.jpg" />
+    <None Remove="Tecno Phantom 9 Wallpaper.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -91,6 +99,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="autosize" Version="3.0.8" />
     <PackageReference Include="MahApps.Metro" Version="2.4.9" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
   </ItemGroup>
@@ -99,6 +108,7 @@
     <Resource Include="Recursos\maxresdefault.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Tecno Phantom 9 Wallpaper.png" />
   </ItemGroup>
 
 </Project>
