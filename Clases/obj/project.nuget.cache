@@ -1,15 +1,27 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "586aOgBvD5Ejy6mAJwSt07/ZBqLdrWkbBZMK9egePDnHTJspiSPoreckX3pSKsCjP1klLKJQMmGAzSQyarr5iQ==",
+=======
+  "dgSpecHash": "sdnEGIauyNBgE3M0Cr33r2QiGfH7RoEfg8jPzF3sq+xQOWZaaexL7BBOPJAnlFuCnGGCLmmC/uXuz0vA1XF2TQ==",
+>>>>>>> 9d132bcb03a5c7c173512ac10b7c1e6dea314f79
   "success": true,
-  "projectFilePath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Clases\\Clases.csproj",
+  "projectFilePath": "D:\\Projects\\NMA_Project\\Clases\\Clases.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
     "C:\\Users\\jeaaa\\.nuget\\packages\\autosize\\3.0.8\\autosize.3.0.8.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+=======
+    "C:\\Users\\diego\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+>>>>>>> 9d132bcb03a5c7c173512ac10b7c1e6dea314f79
   ],
   "logs": []
 }
