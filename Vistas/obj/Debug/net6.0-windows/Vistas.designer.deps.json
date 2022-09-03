@@ -6,6 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+      "autosize/3.0.8": {},
       "ControlzEx/4.4.0": {
         "dependencies": {
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.19",
@@ -189,6 +190,13 @@
     }
   },
   "libraries": {
+    "autosize/3.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7xDsEMsW/OISvkBcwO+LBAgEoDv3ig6DTkXhUzr0HbfI57CQqZL7ZagNwOCIp0Ll7SfvRAesOqxtSAjXGkp+FQ==",
+      "path": "autosize/3.0.8",
+      "hashPath": "autosize.3.0.8.nupkg.sha512"
+    },
     "ControlzEx/4.4.0": {
       "type": "package",
       "serviceable": true,

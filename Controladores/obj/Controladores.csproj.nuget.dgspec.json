@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Controladores\\Controladores.csproj": {}
+    "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Controladores\\Controladores.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Controladores\\Controladores.csproj": {
+    "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Controladores\\Controladores.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Controladores\\Controladores.csproj",
+        "projectUniqueName": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Controladores\\Controladores.csproj",
         "projectName": "Controladores",
-        "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Controladores\\Controladores.csproj",
+        "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Controladores\\Controladores.csproj",
         "packagesPath": "C:\\Users\\jeaaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Controladores\\obj\\",
+        "outputPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMA\\Controladores\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jeaaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,10 @@
             "MahApps.Metro.IconPacks": {
               "target": "Package",
               "version": "[4.11.0, )"
+            },
+            "autosize": {
+              "target": "Package",
+              "version": "[3.0.8, )"
             }
           },
           "imports": [

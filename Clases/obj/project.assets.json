@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "autosize/3.0.8": {
+        "type": "package"
+      },
       "ControlzEx/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -286,6 +289,19 @@
     }
   },
   "libraries": {
+    "autosize/3.0.8": {
+      "sha512": "7xDsEMsW/OISvkBcwO+LBAgEoDv3ig6DTkXhUzr0HbfI57CQqZL7ZagNwOCIp0Ll7SfvRAesOqxtSAjXGkp+FQ==",
+      "type": "package",
+      "path": "autosize/3.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autosize.3.0.8.nupkg.sha512",
+        "autosize.nuspec",
+        "content/Scripts/autosize.js",
+        "content/Scripts/autosize.min.js"
+      ]
+    },
     "ControlzEx/4.4.0": {
       "sha512": "pZ5z4hYWwE4R13UMCVs6vII//nL7hz+Nwn4oJlnsZJRGqJNy6Z9KnJiTZfly6lKFu0pMc1aWBZpx+VqFTQKP1Q==",
       "type": "package",
@@ -1223,7 +1239,8 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "MahApps.Metro >= 2.4.9",
-      "MahApps.Metro.IconPacks >= 4.11.0"
+      "MahApps.Metro.IconPacks >= 4.11.0",
+      "autosize >= 3.0.8"
     ]
   },
   "packageFolders": {
@@ -1232,11 +1249,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Clases\\Clases.csproj",
+      "projectUniqueName": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMA\\Clases\\Clases.csproj",
       "projectName": "Clases",
-      "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Clases\\Clases.csproj",
+      "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMA\\Clases\\Clases.csproj",
       "packagesPath": "C:\\Users\\jeaaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Clases\\obj\\",
+      "outputPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMA\\Clases\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jeaaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1272,6 +1289,10 @@
           "MahApps.Metro.IconPacks": {
             "target": "Package",
             "version": "[4.11.0, )"
+          },
+          "autosize": {
+            "target": "Package",
+            "version": "[3.0.8, )"
           }
         },
         "imports": [

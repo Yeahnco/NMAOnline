@@ -9,12 +9,14 @@
       "Controladores/1.0.0": {
         "dependencies": {
           "MahApps.Metro": "2.4.9",
-          "MahApps.Metro.IconPacks": "4.11.0"
+          "MahApps.Metro.IconPacks": "4.11.0",
+          "autosize": "3.0.8"
         },
         "runtime": {
           "Controladores.dll": {}
         }
       },
+      "autosize/3.0.8": {},
       "ControlzEx/4.4.0": {
         "dependencies": {
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.19",
@@ -195,6 +197,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "autosize/3.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7xDsEMsW/OISvkBcwO+LBAgEoDv3ig6DTkXhUzr0HbfI57CQqZL7ZagNwOCIp0Ll7SfvRAesOqxtSAjXGkp+FQ==",
+      "path": "autosize/3.0.8",
+      "hashPath": "autosize.3.0.8.nupkg.sha512"
     },
     "ControlzEx/4.4.0": {
       "type": "package",

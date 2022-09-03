@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3uirKObfC1OvLp+95LNLi7oeZqLWVUJMiY5wYM1Z3fJWVL+SK9pqEu0Pkv19xJ8tSc23AisHI/ttWFKGy8S9xQ==",
+  "dgSpecHash": "FrZtePvXYtEuMfs8yXOx9dhSBY6axvYt7ZaUCEP2FAdaOid9ad672ZJ4hzQSNsI0I6vZQ2C4WDCkT4mES7o7Ug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMAmvc\\NMA\\Vistas\\Vistas.csproj",
+  "projectFilePath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Vistas\\Vistas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jeaaa\\.nuget\\packages\\autosize\\3.0.8\\autosize.3.0.8.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
