@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Vistas\\Vistas.csproj": {}
   },
   "projects": {
@@ -12,9 +13,26 @@
         "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Vistas\\Vistas.csproj",
         "packagesPath": "C:\\Users\\jeaaa\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Vistas\\obj\\",
+=======
+    "D:\\Projects\\NMA_Project\\Vistas\\Vistas.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\NMA_Project\\Vistas\\Vistas.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\NMA_Project\\Vistas\\Vistas.csproj",
+        "projectName": "Vistas",
+        "projectPath": "D:\\Projects\\NMA_Project\\Vistas\\Vistas.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\NMA_Project\\Vistas\\obj\\",
+>>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jeaaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +40,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

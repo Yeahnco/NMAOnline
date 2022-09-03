@@ -29,7 +29,20 @@ namespace Vistas
         {
             InitializeComponent();
         }
+        public void CambiarTamañoTexto(Label a, String b)
+        {
+            while(b.Length > a.Width)
+            {
+                a.FontSize = a.FontSize - 1;
+            }
+                
+        } 
+        private void Label_Initialized(object sender, EventArgs e)
+        {
+            Empresa1.Content = "CCU";
+        }
 
+<<<<<<< HEAD
         //////////////////////// METODOS CREADOS //////////////////////////
         public void CambiarTamañoTexto(Label a, String b)
         {
@@ -202,6 +215,8 @@ namespace Vistas
             Empresa1.Content = "CCU" + n;
         }
 
+=======
+>>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
         private void fechaAct_Initialized(object sender, EventArgs e)
         {
             fechaAct.Content = DateTime.Now.ToString("dd/MM/yyyy");
@@ -217,6 +232,15 @@ namespace Vistas
             nombreProf.Content = "Gabriel Boric";
         }
 
+<<<<<<< HEAD
+=======
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow login = new MainWindow();
+            this.Close();
+            login.ShowDialog();
+        }
+>>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
 
         private void horaAct_Initialized(object sender, EventArgs e)
         {
@@ -227,11 +251,14 @@ namespace Vistas
         {
             lblActividad.Content = "Visita";
         }
+<<<<<<< HEAD
 
         private void gridTarjAct_Initialized(object sender, EventArgs e)
         {
             //CrearTarjeta(gridTarjAct, stackActHoy, n);
         }
+=======
+>>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
     }
 }
 
