@@ -74,28 +74,11 @@
 
                                     <ScrollViewer Height="357" VerticalAlignment="Top" HorizontalAlignment="Left" Width="847" Margin="-28,23,0,0">
 
-                                        <StackPanel x:Name="stackActHoy">
+                                        <StackPanel x:Name="stackActHoy" Initialized="stackActHoy_Initialized">
+                 
+                                                <local:TarjetaActividades nombreEmp="CCU" fechaAct="06/06/2016" nombreGer="Willson Fisk" nombreProf="Gabriel Boric" horaAct="00:00" lblAct="Actividad"/>
 
-                                            <Grid x:Name="gridTarjAct" Height="95" Width="833" Initialized="gridTarjAct_Initialized">
-                                                <Rectangle x:Name="tarjeta1" HorizontalAlignment="Center" Stroke="Black" Width="800" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}" Margin="0,0,0,9"/>
-                                                <Image x:Name="sombra" Margin="-15,75,-17,-15" Source="/pngegg.png" Stretch="Fill">
-                                                    <Image.OpacityMask>
-                                                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                                    </Image.OpacityMask>
-                                                </Image>
-
-                                                <Label x:Name="Empresa1" Content="Empresa1" FontSize="26" Margin="-17,-3,640,0" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Initialized="Label_Initialized" Height="56" VerticalAlignment="Top"/>
-                                                <Label x:Name="fechaAct" Content="06/06/2016" Margin="39,42,0,0" Initialized="fechaAct_Initialized" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30"/>
-                                                <Label x:Name="lblGerente" Content="Gerente" Margin="261,0,436,63"/>
-                                                <Label Content="Profesional" Margin="461,0,212,67"/>
-                                                <Label x:Name="nombreGerente"  Content="Ejemplo Rodriguez" Margin="214,0,0,0" FontSize="18" Initialized="nombreGerente_Initialized" HorizontalAlignment="Left" VerticalAlignment="Center" Height="36" Width="203" />
-                                                <Label x:Name="nombreProf" Content="Ejemplo Sepulveda" Margin="431,0,0,0" FontSize="18" Initialized="nombreProf_Initialized" HorizontalAlignment="Left" VerticalAlignment="Center" Height="36" Width="199" />
-                                                <Rectangle x:Name="cuadro" HorizontalAlignment="Left" Height="55" Margin="699,17,0,0" Stroke="Black" VerticalAlignment="Top" Width="111" Fill="#FFE0E0E0"/>
-                                                <Label x:Name="horaAct" Content="00:00 am" Margin="707,17,22,0" Background="{x:Null}" FontSize="20" FontWeight="Normal" FontFamily="Global Sans Serif" Initialized="horaAct_Initialized" VerticalAlignment="Top" Height="28"  />
-                                                <Label x:Name="lblActividad" Content="Actividad" Margin="736,36,0,0" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Initialized="lblActividad_Initialized" Width="101" Height="29"/>
-                                                <Image x:Name="header" Source="/maxresdefault.jpg" Margin="694,-2,19,78" Stretch="Fill" />
-
-                                            </Grid>
+                           
 
                                         </StackPanel>
                                     </ScrollViewer>

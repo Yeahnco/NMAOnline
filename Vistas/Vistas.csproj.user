@@ -13,6 +13,9 @@
     <Compile Update="Profesional.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TarjetaActividades.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="test.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,6 +28,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Profesional.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TarjetaActividades.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="test.xaml">
