@@ -89,7 +89,7 @@
                                 <TabControl x:Name="TabControlRevisionCliente" 
                                             FontSize="12" 
                                             mah:HeaderedControlHelper.HeaderFontSize="20" 
-                                            Margin="0,10,0,0" 
+                                            Margin="0,10,0,-85" 
                                             FontWeight="SemiBold">
                                     <TabControl.Background>
                                         <SolidColorBrush Color="White" 
@@ -119,10 +119,100 @@
                                                               Offset="1"/>
                                             </LinearGradientBrush>
                                         </mah:TabControlHelper.UnderlineMouseOverBrush>
-
-                                        <Grid Margin="-4,0,-8,48" 
-                                              Height="410">
-                                        </Grid>
+                                        <ScrollViewer Height="357" 
+                                                      VerticalAlignment="Top" 
+                                                      HorizontalAlignment="Left" 
+                                                      Width="847" 
+                                                      Margin="-28,23,0,0">
+                                            <StackPanel x:Name="stackActHoy">
+                                                <Grid x:Name="gridTarjAct" 
+                                                      Height="95" 
+                                                      Width="833">
+                                                    <Image x:Name="sombra" 
+                                                           Margin="-15,75,-17,-15" 
+                                                           Source="/pngegg.png" 
+                                                           Stretch="Fill">
+                                                        <Image.OpacityMask>
+                                                            <SolidColorBrush Color="Black" 
+                                                                             Opacity="0.6"/>
+                                                        </Image.OpacityMask>
+                                                    </Image>
+                                                    <Label x:Name="lblClienteEmpresa" 
+                                                           Content="CCU" 
+                                                           FontSize="25" 
+                                                           Margin="0,20,750,0" 
+                                                           RenderTransformOrigin="0.5,0.5" 
+                                                           HorizontalContentAlignment="Center" 
+                                                           VerticalContentAlignment="Center"
+                                                           Height="45" 
+                                                           VerticalAlignment="Top"/>
+                                                    <Label x:Name="lblClienteRut" 
+                                                           Content="94413000-1" 
+                                                           Margin="10,50,0,0"
+                                                           VerticalAlignment="Top" 
+                                                           HorizontalAlignment="Left" 
+                                                           Height="30"
+                                                           FontSize="12"/>
+                                                    <Label x:Name="lblGerenteEmpresa" 
+                                                           Content="GERENTE" 
+                                                           Margin="95,0,660,65"/>
+                                                    <Label x:Name="lblProfHead"
+                                                           Content="PROFESIONAL"
+                                                           Margin="200,0,500,60">
+                                                    </Label>
+                                                    <Label x:Name="lblNombreProf"
+                                                           Margin="200,30,520,30"
+                                                           Content="Gabriel Boric"
+                                                           FontSize="15">
+                                                    </Label>
+                                                    <Label x:Name="lblNombreGerente" 
+                                                           Content="Willson Fisk" 
+                                                           Margin="95,0,0,0" 
+                                                           FontSize="15" 
+                                                           HorizontalAlignment="Left" 
+                                                           VerticalAlignment="Center" 
+                                                           Height="36" 
+                                                           Width="100"/>
+                                                    <Label x:Name="lblMailHead" 
+                                                           Content="MAIL" 
+                                                           Margin="330,0,430,61"/>
+                                                    <Label x:Name="mailGerente" 
+                                                           Content="will.fisk@gmail.com" 
+                                                           Margin="329,28,0,0" 
+                                                           FontSize="15" 
+                                                           HorizontalAlignment="Left" 
+                                                           VerticalAlignment="Top" 
+                                                           Height="36" 
+                                                           Width="199"/>
+                                                    <Label x:Name="lblFonoHead"
+                                                           Content="TELÉFONO"
+                                                           Margin="485,0,200,0">
+                                                    </Label>
+                                                    <Label x:Name="lblFono"
+                                                           Content="(2) 2623 2181"
+                                                           Margin="485,30,200,0"
+                                                           FontSize="15">
+                                                    </Label>
+                                                    <Label x:Name="lblHeadDireccion" 
+                                                           Content="DIRECCIÓN" 
+                                                           Margin="603,3,136,0" 
+                                                           Background="{x:Null}" 
+                                                           FontSize="15" 
+                                                           FontWeight="Bold" 
+                                                           FontFamily="Global Sans Serif" 
+                                                           VerticalAlignment="Top" 
+                                                           Height="28"  />
+                                                    <Label x:Name="lblDireccion" 
+                                                           Content="Panamericana Nte. 8500, Quilicura" 
+                                                           Margin="603,29,0,0" 
+                                                           FontSize="14" 
+                                                           HorizontalAlignment="Left" 
+                                                           VerticalAlignment="Top" 
+                                                           Width="229" 
+                                                           Height="29"/>
+                                                </Grid>
+                                            </StackPanel>
+                                        </ScrollViewer>
                                     </TabItem>
                                 </TabControl>
                             </Grid>
