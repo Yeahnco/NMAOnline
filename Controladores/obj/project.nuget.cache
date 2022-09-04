@@ -1,15 +1,26 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "hWx10qIptOFFSe4CAn4XFKI4noPKZgcf4rNbs4TLLY8ErHgCAAOBO11Y8Po9w7odPIEBqcX/8CL++qxLTT92AQ==",
+=======
+  "dgSpecHash": "lOfdrP9pTCdi9b8eqgOp2w6FTMvHroAjlvbOIb5Ndfdb0myn4pUXZJ4XMUQ0XCUXSmH4XCu994Atleu1VzIu7Q==",
+>>>>>>> a5f6ce5837806649ba0f9e85b81e06e8de7c7913
   "success": true,
-  "projectFilePath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Controladores\\Controladores.csproj",
+  "projectFilePath": "D:\\Projects\\NMA_Project\\Controladores\\Controladores.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jeaaa\\.nuget\\packages\\autosize\\3.0.8\\autosize.3.0.8.nupkg.sha512",
-    "C:\\Users\\jeaaa\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
-    "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
-    "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
-    "C:\\Users\\jeaaa\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
-    "C:\\Users\\jeaaa\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+    "C:\\Users\\diego\\.nuget\\packages\\autosize\\3.0.8\\autosize.3.0.8.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché D:\\Projects\\NMA_Project\\Controladores\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

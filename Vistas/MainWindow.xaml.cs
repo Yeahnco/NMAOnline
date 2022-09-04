@@ -30,6 +30,8 @@ namespace Vistas
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = "NMA";
+            
         }
 
         private async void ValidarLogin()

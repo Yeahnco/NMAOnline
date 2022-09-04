@@ -1,4 +1,6 @@
 ﻿using MahApps.Metro.Controls;
+using MahApps.Metro.IconPacks;
+using MahApps.Metro.Theming;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Vistas
 {
     /// <summary>
@@ -23,6 +26,7 @@ namespace Vistas
         public Profesional()
         {
             InitializeComponent();
+            this.WindowStyle = WindowStyle.None;
         }
     }
 }
