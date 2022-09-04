@@ -23,7 +23,6 @@ namespace Vistas
     {
         //////////////////////// Variables Globales //////////////////////////
         int n=0;
-
         //////////////////////// Variables Globales //////////////////////////
         public Administrador()
         {
@@ -34,25 +33,38 @@ namespace Vistas
             while(b.Length > a.Width)
             {
                 a.FontSize = a.FontSize - 1;
-            }
-                
+            } 
         } 
+        //////////////////////// METODOS CREADOS //////////////////////////
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow login = new MainWindow();
+            this.Close();
+            login.ShowDialog();
+        }
         private void Label_Initialized(object sender, EventArgs e)
         {
-            Empresa1.Content = "CCU";
+            Empresa1.Content = "CCU" + n;
         }
-
-<<<<<<< HEAD
-        //////////////////////// METODOS CREADOS //////////////////////////
-        public void CambiarTamañoTexto(Label a, String b)
+        private void fechaAct_Initialized(object sender, EventArgs e)
         {
-            while(b.Length > a.Width)
-            {
-                a.FontSize = a.FontSize - 1;
-            }
-                
+            fechaAct.Content = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
+        private void nombreGerente_Initialized(object sender, EventArgs e)
+        {
+            nombreGerente.Content = "Willson Fisk";
+        }
+
+        private void nombreProf_Initialized(object sender, EventArgs e)
+        {
+            nombreProf.Content = "Gabriel Boric";
+        }
+        private void horaAct_Initialized(object sender, EventArgs e)
+        {
+            horaAct.Content = DateTime.Now.ToString("hh:mm tt");
+        }
         public int CrearTarjeta(Grid a, StackPanel b, int n)
         {
             Grid tarjeta = new Grid();
@@ -61,7 +73,7 @@ namespace Vistas
             tarjeta.Name = a.Name + n;
 
             if (tarjeta.Children.Contains(tarjeta1))
-            { 
+            {
                 tarjeta.Children.Remove(tarjeta1);
 
                 Rectangle cloneT1 = new Rectangle();
@@ -139,7 +151,7 @@ namespace Vistas
             }
 
             if (tarjeta.Children.Contains(sombra))
-            {   
+            {
                 tarjeta.Children.Remove(sombra);
 
                 Image cloneImg = new Image();
@@ -167,7 +179,7 @@ namespace Vistas
                 tarjeta.Children.Remove(cuadro);
 
                 Rectangle cloneRec = new Rectangle();
-                cloneRec= cuadro;
+                cloneRec = cuadro;
                 cloneRec.Name = header.Name + n;
 
                 tarjeta.Children.Add(cloneRec);
@@ -188,7 +200,7 @@ namespace Vistas
             {
                 tarjeta.Children.Remove(lblGerente);
 
-                
+
 
                 tarjeta.Children.Add(lblGerente);
             }
@@ -198,67 +210,16 @@ namespace Vistas
             return n;
 
         }
-
-
-
-        //////////////////////////////////////////////////////////////////////
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow login = new MainWindow();
-            this.Close();
-            login.ShowDialog();
-        }
-
-        private void Label_Initialized(object sender, EventArgs e)
-        {
-            Empresa1.Content = "CCU" + n;
-        }
-
-=======
->>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
-        private void fechaAct_Initialized(object sender, EventArgs e)
-        {
-            fechaAct.Content = DateTime.Now.ToString("dd/MM/yyyy");
-        }
-
-        private void nombreGerente_Initialized(object sender, EventArgs e)
-        {
-            nombreGerente.Content = "Willson Fisk";
-        }
-
-        private void nombreProf_Initialized(object sender, EventArgs e)
-        {
-            nombreProf.Content = "Gabriel Boric";
-        }
-
-<<<<<<< HEAD
-=======
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow login = new MainWindow();
-            this.Close();
-            login.ShowDialog();
-        }
->>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
-
-        private void horaAct_Initialized(object sender, EventArgs e)
-        {
-            horaAct.Content = DateTime.Now.ToString("hh:mm tt");
-        }
-
         private void lblActividad_Initialized(object sender, EventArgs e)
         {
             lblActividad.Content = "Visita";
         }
-<<<<<<< HEAD
-
         private void gridTarjAct_Initialized(object sender, EventArgs e)
         {
             //CrearTarjeta(gridTarjAct, stackActHoy, n);
         }
-=======
->>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
+        //////////////////////////////////////////////////////////////////////
+        
     }
 }
 
