@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Clases\\Clases.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Clases\\Clases.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Clases\\Clases.csproj",
+        "projectName": "Clases",
+        "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Clases\\Clases.csproj",
+        "packagesPath": "C:\\Users\\jeaaa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\NMA\\Clases\\obj\\",
+=======
     "D:\\Projects\\NMA_Project\\Clases\\Clases.csproj": {}
   },
   "projects": {
@@ -12,6 +25,7 @@
         "projectPath": "D:\\Projects\\NMA_Project\\Clases\\Clases.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
         "outputPath": "D:\\Projects\\NMA_Project\\Clases\\obj\\",
+>>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

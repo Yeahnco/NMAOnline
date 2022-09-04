@@ -1,5 +1,17 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "FrZtePvXYtEuMfs8yXOx9dhSBY6axvYt7ZaUCEP2FAdaOid9ad672ZJ4hzQSNsI0I6vZQ2C4WDCkT4mES7o7Ug==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO\\nma\\Vistas\\Vistas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jeaaa\\.nuget\\packages\\autosize\\3.0.8\\autosize.3.0.8.nupkg.sha512",
+    "C:\\Users\\jeaaa\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
+    "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
+    "C:\\Users\\jeaaa\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\jeaaa\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+=======
   "dgSpecHash": "ZFYvgjMkz0ZHi/mcudeUuSbTo53orqnmn4rohNrSYYzD2clsEuO2WdChTb/RILpQeE3N/I5qirjDYjfpYQ2bdg==",
   "success": true,
   "projectFilePath": "D:\\Projects\\NMA_Project\\Vistas\\Vistas.csproj",
@@ -10,6 +22,7 @@
     "C:\\Users\\diego\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+>>>>>>> a5d65e2d3c6b74014f4ea2d31a69d9bc02b623f6
   ],
   "logs": [
     {
