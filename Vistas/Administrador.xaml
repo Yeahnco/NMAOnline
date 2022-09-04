@@ -79,6 +79,7 @@
                                                     <Label x:Name="horaAct" Content="00:00 am" Margin="707,17,22,0" Background="{x:Null}" FontSize="20" FontWeight="Normal" FontFamily="Global Sans Serif" Initialized="horaAct_Initialized" VerticalAlignment="Top" Height="28"  />
                                                     <Label x:Name="lblActividad" Content="Actividad" Margin="736,36,0,0" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Initialized="lblActividad_Initialized" Width="101" Height="29"/>
                                                     <Image x:Name="header" Source="/maxresdefault.jpg" Margin="694,-2,19,78" Stretch="Fill" />
+                                                    ♠
                                                 </Grid>
                                             </StackPanel>
                                         </ScrollViewer>
