@@ -30,6 +30,62 @@
                 <TabControl.Background>
                     <ImageBrush/>
                 </TabControl.Background>
+<<<<<<< HEAD
+
+                <TabItem x:Name="TabitemActividades" Header="Actividades"  HorizontalContentAlignment="Right" Margin="9,8,-26,-14" mah:HeaderedControlHelper.HeaderFontSize="14" mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Right" Grid.IsSharedSizeScope="True" Padding="26,2,6,2" RenderTransformOrigin="0.5,0.5" mah:HeaderedControlHelper.HeaderForeground="Black">
+                    <TabItem.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Recursos/Iconos/PURPURA/icons8-clock-50.png">
+                            <ImageBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="0.6" ScaleY="0.6"/>
+                                    <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                    <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform X="-0.42" Y="-0.08"/>
+                                </TransformGroup>
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
+                    </TabItem.Background>
+                    <Grid RenderTransformOrigin="0.5,0.5" Width="836" Margin="0,-40,0,0">
+
+                        <Grid Margin="10,10,0,0">
+
+                            <TabControl x:Name="TabControlAct" FontSize="12" mah:HeaderedControlHelper.HeaderFontSize="20" Margin="0,10,0,-85" FontWeight="SemiBold">
+
+                                <TabControl.Background>
+                                    <SolidColorBrush Color="White" Opacity="0"/>
+                                </TabControl.Background>
+
+                                <TabItem x:Name="TabItemHoyAct" Header="Hoy" FontSize="16" MinWidth="0" MinHeight="1" FontStretch="Expanded" mah:HeaderedControlHelper.HeaderFontSize="15" mah:HeaderedControlHelper.HeaderForeground="#FF4E16D1" mah:TabControlHelper.UnderlineBrush="#FF4E16D1" mah:TabControlHelper.UnderlineSelectedBrush="#FF4E16D1" mah:TabControlHelper.UnderlineMouseOverSelectedBrush="#FF4E16D1" mah:HeaderedControlHelper.HeaderFontWeight="SemiBold">
+
+                                    <TabItem.Background>
+                                        <SolidColorBrush Color="White" Opacity="0"/>
+                                    </TabItem.Background>
+                                    <mah:TabControlHelper.UnderlineMouseOverBrush>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="Black"/>
+                                            <GradientStop Color="#FF4E16D1" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </mah:TabControlHelper.UnderlineMouseOverBrush>
+
+                                    <ScrollViewer Height="357" VerticalAlignment="Top" HorizontalAlignment="Left" Width="847" Margin="-28,23,0,0">
+
+                                        <StackPanel x:Name="stackActHoy" Initialized="stackActHoy_Initialized">
+                 
+                                                <local:TarjetaActividades nombreEmp="CCU" fechaAct="06/06/2016" nombreGer="Willson Fisk" nombreProf="Gabriel Boric" horaAct="00:00" lblAct="Actividad"/>
+
+                           
+
+                                        </StackPanel>
+                                    </ScrollViewer>
+
+
+
+                                </TabItem>
+
+                                <TabItem x:Name="TabitemSemanaAct" Header="Semana" mah:HeaderedControlHelper.HeaderFontSize="15" mah:HeaderedControlHelper.HeaderFontWeight="SemiBold">
+                                    <Grid>
+                                        <Grid.Background>
+=======
                 <TabControl Margin="0,-50,10,10">
                     <TabControl Margin="0,-23,10,10">
                         <TabControl.Background>
@@ -240,6 +296,7 @@
                                 <Grid Margin="10,10,0,0">
                                     <TabControl x:Name="TabControlAct2" FontSize="12" mah:HeaderedControlHelper.HeaderFontSize="20" Margin="0,10,0,-85" FontWeight="SemiBold">
                                         <TabControl.Background>
+>>>>>>> a5f6ce5837806649ba0f9e85b81e06e8de7c7913
                                             <SolidColorBrush Color="White" Opacity="0"/>
                                         </TabControl.Background>
                                         <TabItem x:Name="TabitemAdministrarProf" Header="Administrar" FontSize="16" MinWidth="0" MinHeight="1" FontStretch="Expanded" mah:HeaderedControlHelper.HeaderFontSize="15" mah:HeaderedControlHelper.HeaderForeground="#FF4E16D1" mah:TabControlHelper.UnderlineBrush="#FF4E16D1" mah:TabControlHelper.UnderlineSelectedBrush="#FF4E16D1" mah:TabControlHelper.UnderlineMouseOverSelectedBrush="#FF4E16D1" mah:HeaderedControlHelper.HeaderFontWeight="SemiBold">

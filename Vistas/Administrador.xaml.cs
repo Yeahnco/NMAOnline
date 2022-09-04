@@ -52,6 +52,12 @@ namespace Vistas
             fechaAct.Content = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
+<<<<<<< HEAD
+        public void CrearTarjeta()
+        {
+            TarjetaActividades tarjetaActividades = new TarjetaActividades();
+            stackActHoy.Children.Add(tarjetaActividades);
+=======
         private void nombreGerente_Initialized(object sender, EventArgs e)
         {
             nombreGerente.Content = "Willson Fisk";
@@ -208,8 +214,28 @@ namespace Vistas
             b.Children.Add(tarjeta);
 
             return n;
+>>>>>>> a5f6ce5837806649ba0f9e85b81e06e8de7c7913
 
+            tarjetaActividades.nombreEmp = "ZARA";
         }
+<<<<<<< HEAD
+
+
+
+        //////////////////////////////////////////////////////////////////////
+
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow login = new MainWindow();
+            this.Close();
+            login.ShowDialog();
+        }
+
+        private void stackActHoy_Initialized(object sender, EventArgs e)
+        {
+            CrearTarjeta();
+=======
         private void lblActividad_Initialized(object sender, EventArgs e)
         {
             lblActividad.Content = "Visita";
@@ -217,6 +243,7 @@ namespace Vistas
         private void gridTarjAct_Initialized(object sender, EventArgs e)
         {
             //CrearTarjeta(gridTarjAct, stackActHoy, n);
+>>>>>>> a5f6ce5837806649ba0f9e85b81e06e8de7c7913
         }
         //////////////////////////////////////////////////////////////////////
         

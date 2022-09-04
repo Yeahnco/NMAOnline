@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "l8va437ueW/azXUGBEgPQkQP3DZStYx2NrBJjoUUjBlcFkq81WYK9m+UKNheu3DGFbyLdYRQG9f/TM29k5O2nA==",
+=======
   "dgSpecHash": "QzNkN690XmN6n6vaQ4/ub1M+5gI6WO3Xd6dvbjm8rOmoOy26U9UhFAFEXg0JklrnScx11OFWdtlYjceoEu1GKA==",
+>>>>>>> a5f6ce5837806649ba0f9e85b81e06e8de7c7913
   "success": true,
   "projectFilePath": "D:\\Projects\\NMA_Project\\Clases\\Clases.csproj",
   "expectedPackageFiles": [
