@@ -1,0 +1,1234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BD_NMAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BD_NMA.dbo.Accidente' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="Accidente">
+          <Key>
+            <PropertyRef Name="Tipo_acc" />
+            <PropertyRef Name="Descripcion_acc" />
+            <PropertyRef Name="Gravedad_acc" />
+            <PropertyRef Name="Alerta_id_alerta" />
+            <PropertyRef Name="Profesional_id_prof" />
+          </Key>
+          <Property Name="Tipo_acc" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Descripcion_acc" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="Gravedad_acc" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Alerta_id_alerta" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Profesional_id_prof" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Act_de_mejora">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nombre_act_mejor" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Descripcion_act_mejora" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Actividad">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Fecha_act" Type="date" Nullable="false" />
+          <Property Name="Hora_act" Type="date" Nullable="false" />
+          <Property Name="Alerta_id_alerta" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Contador" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Administrador">
+          <Key>
+            <PropertyRef Name="id_adm" />
+          </Key>
+          <Property Name="id_adm" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nombre_adm" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Direccion_adm" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Profesional_id_prof" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Alerta">
+          <Key>
+            <PropertyRef Name="id_alerta" />
+          </Key>
+          <Property Name="id_alerta" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Motivo_alerta" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Registro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gerente_id_emp" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Asesoria">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Razon_ases" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Estado_caso" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Diligencia" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Evento_ases" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Solicitud_id_solicitud" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Capacitacion">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nombre_cap" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Asistentes" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="Material" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Checklist">
+          <Key>
+            <PropertyRef Name="id_check_list" />
+          </Key>
+          <Property Name="id_check_list" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aspectos" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Resporte" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="id_emp" />
+          </Key>
+          <Property Name="id_emp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Rut_emp" Type="int" Nullable="false" />
+          <Property Name="Dv_Rut_emp" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="Nombre_emp" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Direccion_emp" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contrato">
+          <Key>
+            <PropertyRef Name="id_contrato" />
+          </Key>
+          <Property Name="id_contrato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vencimiento_cont" Type="date" Nullable="false" />
+          <Property Name="Archivo_pdf" Type="image" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gerente">
+          <Key>
+            <PropertyRef Name="id_emp" />
+          </Key>
+          <Property Name="id_emp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre_gerente" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fono_cliente" Type="int" Nullable="false" />
+          <Property Name="direccion_cliente" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="mail_cliente" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contrato_id_contrato" Type="int" Nullable="false" />
+          <Property Name="Solicitud_id_solicitud" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pago">
+          <Key>
+            <PropertyRef Name="id_pago" />
+          </Key>
+          <Property Name="id_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estado_pago" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mes_pago" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Valor_extra" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Total_a_pagar" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Comprobante" Type="image" Nullable="false" />
+          <Property Name="Plan_plan_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Plan">
+          <Key>
+            <PropertyRef Name="plan_id" />
+          </Key>
+          <Property Name="plan_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo_plan" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Valor_plan" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Pago_id_pago" Type="int" Nullable="false" />
+          <Property Name="Contrato_id_contrato" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profesional">
+          <Key>
+            <PropertyRef Name="id_prof" />
+          </Key>
+          <Property Name="id_prof" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Rut_prof" Type="int" Nullable="false" />
+          <Property Name="Dv_rut_prof" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Nombre_prof" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Vigencia_prof" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Rendimiento_prof" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Estado_prof" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fecha_nacimiento_prof" Type="date" Nullable="false" />
+          <Property Name="Mail_prof" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Asesoria_id_act" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Alerta_id_alerta" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Visita_id_act" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Solicitud_id_solicitud" Type="int" Nullable="false" />
+          <Property Name="Checklist_id_checklist" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Solicitud">
+          <Key>
+            <PropertyRef Name="id_solicitud" />
+          </Key>
+          <Property Name="id_solicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Razon_soli" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Visita">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Profesional_id_prof" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Cliente_id_emp" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Accidente_Alerta">
+          <End Role="Alerta" Type="Self.Alerta" Multiplicity="1" />
+          <End Role="Accidente" Type="Self.Accidente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alerta">
+              <PropertyRef Name="id_alerta" />
+            </Principal>
+            <Dependent Role="Accidente">
+              <PropertyRef Name="Alerta_id_alerta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Accidente_Profesional">
+          <End Role="Profesional" Type="Self.Profesional" Multiplicity="1" />
+          <End Role="Accidente" Type="Self.Accidente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profesional">
+              <PropertyRef Name="id_prof" />
+            </Principal>
+            <Dependent Role="Accidente">
+              <PropertyRef Name="Profesional_id_prof" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Actividad_Act_de_mejora">
+          <End Role="Act_de_mejora" Type="Self.Act_de_mejora" Multiplicity="1" />
+          <End Role="Actividad" Type="Self.Actividad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Act_de_mejora">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Actividad">
+              <PropertyRef Name="id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Actividad_Asesoria">
+          <End Role="Asesoria" Type="Self.Asesoria" Multiplicity="1" />
+          <End Role="Actividad" Type="Self.Actividad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Asesoria">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Actividad">
+              <PropertyRef Name="id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Actividad_Capacitacion">
+          <End Role="Capacitacion" Type="Self.Capacitacion" Multiplicity="1" />
+          <End Role="Actividad" Type="Self.Actividad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Capacitacion">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Actividad">
+              <PropertyRef Name="id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Administrador_Profesional">
+          <End Role="Profesional" Type="Self.Profesional" Multiplicity="1" />
+          <End Role="Administrador" Type="Self.Administrador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profesional">
+              <PropertyRef Name="id_prof" />
+            </Principal>
+            <Dependent Role="Administrador">
+              <PropertyRef Name="Profesional_id_prof" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alerta_Gerente">
+          <End Role="Gerente" Type="Self.Gerente" Multiplicity="1" />
+          <End Role="Alerta" Type="Self.Alerta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gerente">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="Alerta">
+              <PropertyRef Name="Gerente_id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gerente_Cliente">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+          <End Role="Gerente" Type="Self.Gerente" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="Gerente">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gerente_Contrato">
+          <End Role="Contrato" Type="Self.Contrato" Multiplicity="1" />
+          <End Role="Gerente" Type="Self.Gerente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contrato">
+              <PropertyRef Name="id_contrato" />
+            </Principal>
+            <Dependent Role="Gerente">
+              <PropertyRef Name="Contrato_id_contrato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gerente_Solicitud">
+          <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="1" />
+          <End Role="Gerente" Type="Self.Gerente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solicitud">
+              <PropertyRef Name="id_solicitud" />
+            </Principal>
+            <Dependent Role="Gerente">
+              <PropertyRef Name="Solicitud_id_solicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Plan_Contrato">
+          <End Role="Contrato" Type="Self.Contrato" Multiplicity="1" />
+          <End Role="Plan" Type="Self.Plan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contrato">
+              <PropertyRef Name="id_contrato" />
+            </Principal>
+            <Dependent Role="Plan">
+              <PropertyRef Name="Contrato_id_contrato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Plan_Pago">
+          <End Role="Pago" Type="Self.Pago" Multiplicity="1" />
+          <End Role="Plan" Type="Self.Plan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pago">
+              <PropertyRef Name="id_pago" />
+            </Principal>
+            <Dependent Role="Plan">
+              <PropertyRef Name="Pago_id_pago" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profesional_Checklist">
+          <End Role="Checklist" Type="Self.Checklist" Multiplicity="1" />
+          <End Role="Profesional" Type="Self.Profesional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checklist">
+              <PropertyRef Name="id_check_list" />
+            </Principal>
+            <Dependent Role="Profesional">
+              <PropertyRef Name="Checklist_id_checklist" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profesional_Visita">
+          <End Role="Visita" Type="Self.Visita" Multiplicity="1" />
+          <End Role="Profesional" Type="Self.Profesional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visita">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Profesional">
+              <PropertyRef Name="Visita_id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visita_Actividad">
+          <End Role="Actividad" Type="Self.Actividad" Multiplicity="1" />
+          <End Role="Visita" Type="Self.Visita" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Actividad">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Visita">
+              <PropertyRef Name="id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="BD_NMAModelStoreContainer">
+          <EntitySet Name="Act_de_mejora" EntityType="Self.Act_de_mejora" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Actividad" EntityType="Self.Actividad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Administrador" EntityType="Self.Administrador" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Alerta" EntityType="Self.Alerta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Asesoria" EntityType="Self.Asesoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Capacitacion" EntityType="Self.Capacitacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Checklist" EntityType="Self.Checklist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contrato" EntityType="Self.Contrato" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gerente" EntityType="Self.Gerente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pago" EntityType="Self.Pago" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Plan" EntityType="Self.Plan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profesional" EntityType="Self.Profesional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Solicitud" EntityType="Self.Solicitud" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Visita" EntityType="Self.Visita" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Accidente" EntityType="Self.Accidente" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Accidente].[Tipo_acc] AS [Tipo_acc], 
+    [Accidente].[Descripcion_acc] AS [Descripcion_acc], 
+    [Accidente].[Gravedad_acc] AS [Gravedad_acc], 
+    [Accidente].[Alerta_id_alerta] AS [Alerta_id_alerta], 
+    [Accidente].[Profesional_id_prof] AS [Profesional_id_prof]
+    FROM [dbo].[Accidente] AS [Accidente]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Accidente_Alerta" Association="Self.FK_Accidente_Alerta">
+            <End Role="Alerta" EntitySet="Alerta" />
+            <End Role="Accidente" EntitySet="Accidente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Accidente_Profesional" Association="Self.FK_Accidente_Profesional">
+            <End Role="Profesional" EntitySet="Profesional" />
+            <End Role="Accidente" EntitySet="Accidente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Actividad_Act_de_mejora" Association="Self.FK_Actividad_Act_de_mejora">
+            <End Role="Act_de_mejora" EntitySet="Act_de_mejora" />
+            <End Role="Actividad" EntitySet="Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Actividad_Asesoria" Association="Self.FK_Actividad_Asesoria">
+            <End Role="Asesoria" EntitySet="Asesoria" />
+            <End Role="Actividad" EntitySet="Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Actividad_Capacitacion" Association="Self.FK_Actividad_Capacitacion">
+            <End Role="Capacitacion" EntitySet="Capacitacion" />
+            <End Role="Actividad" EntitySet="Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Administrador_Profesional" Association="Self.FK_Administrador_Profesional">
+            <End Role="Profesional" EntitySet="Profesional" />
+            <End Role="Administrador" EntitySet="Administrador" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alerta_Gerente" Association="Self.FK_Alerta_Gerente">
+            <End Role="Gerente" EntitySet="Gerente" />
+            <End Role="Alerta" EntitySet="Alerta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gerente_Cliente" Association="Self.FK_Gerente_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Gerente" EntitySet="Gerente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gerente_Contrato" Association="Self.FK_Gerente_Contrato">
+            <End Role="Contrato" EntitySet="Contrato" />
+            <End Role="Gerente" EntitySet="Gerente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gerente_Solicitud" Association="Self.FK_Gerente_Solicitud">
+            <End Role="Solicitud" EntitySet="Solicitud" />
+            <End Role="Gerente" EntitySet="Gerente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Plan_Contrato" Association="Self.FK_Plan_Contrato">
+            <End Role="Contrato" EntitySet="Contrato" />
+            <End Role="Plan" EntitySet="Plan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Plan_Pago" Association="Self.FK_Plan_Pago">
+            <End Role="Pago" EntitySet="Pago" />
+            <End Role="Plan" EntitySet="Plan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profesional_Checklist" Association="Self.FK_Profesional_Checklist">
+            <End Role="Checklist" EntitySet="Checklist" />
+            <End Role="Profesional" EntitySet="Profesional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profesional_Visita" Association="Self.FK_Profesional_Visita">
+            <End Role="Visita" EntitySet="Visita" />
+            <End Role="Profesional" EntitySet="Profesional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visita_Actividad" Association="Self.FK_Visita_Actividad">
+            <End Role="Actividad" EntitySet="Actividad" />
+            <End Role="Visita" EntitySet="Visita" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_NMAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Act_de_mejora">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_act_mejor" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion_act_mejora" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividad_Act_de_mejora" FromRole="Act_de_mejora" ToRole="Actividad" />
+        </EntityType>
+        <EntityType Name="Actividad">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fecha_act" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Hora_act" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Alerta_id_alerta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contador" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Act_de_mejora" Relationship="Self.FK_Actividad_Act_de_mejora" FromRole="Actividad" ToRole="Act_de_mejora" />
+          <NavigationProperty Name="Asesoria" Relationship="Self.FK_Actividad_Asesoria" FromRole="Actividad" ToRole="Asesoria" />
+          <NavigationProperty Name="Capacitacion" Relationship="Self.FK_Actividad_Capacitacion" FromRole="Actividad" ToRole="Capacitacion" />
+          <NavigationProperty Name="Visita" Relationship="Self.FK_Visita_Actividad" FromRole="Actividad" ToRole="Visita" />
+        </EntityType>
+        <EntityType Name="Administrador">
+          <Key>
+            <PropertyRef Name="id_adm" />
+          </Key>
+          <Property Name="id_adm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_adm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion_adm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Profesional_id_prof" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Profesional" Relationship="Self.FK_Administrador_Profesional" FromRole="Administrador" ToRole="Profesional" />
+        </EntityType>
+        <EntityType Name="Alerta">
+          <Key>
+            <PropertyRef Name="id_alerta" />
+          </Key>
+          <Property Name="id_alerta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Motivo_alerta" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Registro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Gerente_id_emp" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Accidente" Relationship="Self.FK_Accidente_Alerta" FromRole="Alerta" ToRole="Accidente" />
+          <NavigationProperty Name="Gerente" Relationship="Self.FK_Alerta_Gerente" FromRole="Alerta" ToRole="Gerente" />
+        </EntityType>
+        <EntityType Name="Asesoria">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Razon_ases" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado_caso" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Diligencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Evento_ases" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Solicitud_id_solicitud" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividad_Asesoria" FromRole="Asesoria" ToRole="Actividad" />
+        </EntityType>
+        <EntityType Name="Capacitacion">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_cap" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Asistentes" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Material" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividad_Capacitacion" FromRole="Capacitacion" ToRole="Actividad" />
+        </EntityType>
+        <EntityType Name="Checklist">
+          <Key>
+            <PropertyRef Name="id_check_list" />
+          </Key>
+          <Property Name="id_check_list" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Aspectos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Resporte" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Profesional" Relationship="Self.FK_Profesional_Checklist" FromRole="Checklist" ToRole="Profesional" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="id_emp" />
+          </Key>
+          <Property Name="id_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rut_emp" Type="Int32" Nullable="false" />
+          <Property Name="Dv_Rut_emp" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_emp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion_emp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Gerente" Relationship="Self.FK_Gerente_Cliente" FromRole="Cliente" ToRole="Gerente" />
+        </EntityType>
+        <EntityType Name="Contrato">
+          <Key>
+            <PropertyRef Name="id_contrato" />
+          </Key>
+          <Property Name="id_contrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vencimiento_cont" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Archivo_pdf" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="Gerente" Relationship="Self.FK_Gerente_Contrato" FromRole="Contrato" ToRole="Gerente" />
+          <NavigationProperty Name="Plan" Relationship="Self.FK_Plan_Contrato" FromRole="Contrato" ToRole="Plan" />
+        </EntityType>
+        <EntityType Name="Gerente">
+          <Key>
+            <PropertyRef Name="id_emp" />
+          </Key>
+          <Property Name="id_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_gerente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fono_cliente" Type="Int32" Nullable="false" />
+          <Property Name="direccion_cliente" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mail_cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contrato_id_contrato" Type="Int32" Nullable="false" />
+          <Property Name="Solicitud_id_solicitud" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Alerta" Relationship="Self.FK_Alerta_Gerente" FromRole="Gerente" ToRole="Alerta" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK_Gerente_Cliente" FromRole="Gerente" ToRole="Cliente" />
+          <NavigationProperty Name="Contrato" Relationship="Self.FK_Gerente_Contrato" FromRole="Gerente" ToRole="Contrato" />
+          <NavigationProperty Name="Solicitud" Relationship="Self.FK_Gerente_Solicitud" FromRole="Gerente" ToRole="Solicitud" />
+        </EntityType>
+        <EntityType Name="Pago">
+          <Key>
+            <PropertyRef Name="id_pago" />
+          </Key>
+          <Property Name="id_pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estado_pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mes_pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Valor_extra" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Total_a_pagar" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Comprobante" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="Plan_plan_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Plan" Relationship="Self.FK_Plan_Pago" FromRole="Pago" ToRole="Plan" />
+        </EntityType>
+        <EntityType Name="Plan">
+          <Key>
+            <PropertyRef Name="plan_id" />
+          </Key>
+          <Property Name="plan_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo_plan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Valor_plan" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Pago_id_pago" Type="Int32" Nullable="false" />
+          <Property Name="Contrato_id_contrato" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Contrato" Relationship="Self.FK_Plan_Contrato" FromRole="Plan" ToRole="Contrato" />
+          <NavigationProperty Name="Pago" Relationship="Self.FK_Plan_Pago" FromRole="Plan" ToRole="Pago" />
+        </EntityType>
+        <EntityType Name="Profesional">
+          <Key>
+            <PropertyRef Name="id_prof" />
+          </Key>
+          <Property Name="id_prof" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Rut_prof" Type="Int32" Nullable="false" />
+          <Property Name="Dv_rut_prof" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_prof" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Vigencia_prof" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Rendimiento_prof" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado_prof" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fecha_nacimiento_prof" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Mail_prof" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Asesoria_id_act" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Alerta_id_alerta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Visita_id_act" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Solicitud_id_solicitud" Type="Int32" Nullable="false" />
+          <Property Name="Checklist_id_checklist" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Administrador" Relationship="Self.FK_Administrador_Profesional" FromRole="Profesional" ToRole="Administrador" />
+          <NavigationProperty Name="Checklist" Relationship="Self.FK_Profesional_Checklist" FromRole="Profesional" ToRole="Checklist" />
+          <NavigationProperty Name="Accidente" Relationship="Self.FK_Accidente_Profesional" FromRole="Profesional" ToRole="Accidente" />
+          <NavigationProperty Name="Visita" Relationship="Self.FK_Profesional_Visita" FromRole="Profesional" ToRole="Visita" />
+        </EntityType>
+        <EntityType Name="Solicitud">
+          <Key>
+            <PropertyRef Name="id_solicitud" />
+          </Key>
+          <Property Name="id_solicitud" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Razon_soli" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Gerente" Relationship="Self.FK_Gerente_Solicitud" FromRole="Solicitud" ToRole="Gerente" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Visita">
+          <Key>
+            <PropertyRef Name="id_act" />
+          </Key>
+          <Property Name="id_act" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Profesional_id_prof" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cliente_id_emp" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Actividad" Relationship="Self.FK_Visita_Actividad" FromRole="Visita" ToRole="Actividad" />
+          <NavigationProperty Name="Profesional" Relationship="Self.FK_Profesional_Visita" FromRole="Visita" ToRole="Profesional" />
+        </EntityType>
+        <EntityType Name="Accidente">
+          <Key>
+            <PropertyRef Name="Tipo_acc" />
+            <PropertyRef Name="Descripcion_acc" />
+            <PropertyRef Name="Gravedad_acc" />
+            <PropertyRef Name="Alerta_id_alerta" />
+            <PropertyRef Name="Profesional_id_prof" />
+          </Key>
+          <Property Name="Tipo_acc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion_acc" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Gravedad_acc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Alerta_id_alerta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Profesional_id_prof" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Alerta" Relationship="Self.FK_Accidente_Alerta" FromRole="Accidente" ToRole="Alerta" />
+          <NavigationProperty Name="Profesional" Relationship="Self.FK_Accidente_Profesional" FromRole="Accidente" ToRole="Profesional" />
+        </EntityType>
+        <Association Name="FK_Actividad_Act_de_mejora">
+          <End Role="Act_de_mejora" Type="Self.Act_de_mejora" Multiplicity="1" />
+          <End Role="Actividad" Type="Self.Actividad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Act_de_mejora">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Actividad">
+              <PropertyRef Name="id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Actividad_Asesoria">
+          <End Role="Asesoria" Type="Self.Asesoria" Multiplicity="1" />
+          <End Role="Actividad" Type="Self.Actividad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Asesoria">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Actividad">
+              <PropertyRef Name="id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Actividad_Capacitacion">
+          <End Role="Capacitacion" Type="Self.Capacitacion" Multiplicity="1" />
+          <End Role="Actividad" Type="Self.Actividad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Capacitacion">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Actividad">
+              <PropertyRef Name="id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visita_Actividad">
+          <End Role="Actividad" Type="Self.Actividad" Multiplicity="1" />
+          <End Role="Visita" Type="Self.Visita" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Actividad">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Visita">
+              <PropertyRef Name="id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Administrador_Profesional">
+          <End Role="Profesional" Type="Self.Profesional" Multiplicity="1" />
+          <End Role="Administrador" Type="Self.Administrador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profesional">
+              <PropertyRef Name="id_prof" />
+            </Principal>
+            <Dependent Role="Administrador">
+              <PropertyRef Name="Profesional_id_prof" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Accidente_Alerta">
+          <End Role="Alerta" Type="Self.Alerta" Multiplicity="1" />
+          <End Role="Accidente" Type="Self.Accidente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alerta">
+              <PropertyRef Name="id_alerta" />
+            </Principal>
+            <Dependent Role="Accidente">
+              <PropertyRef Name="Alerta_id_alerta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alerta_Gerente">
+          <End Role="Gerente" Type="Self.Gerente" Multiplicity="1" />
+          <End Role="Alerta" Type="Self.Alerta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gerente">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="Alerta">
+              <PropertyRef Name="Gerente_id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profesional_Checklist">
+          <End Role="Checklist" Type="Self.Checklist" Multiplicity="1" />
+          <End Role="Profesional" Type="Self.Profesional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checklist">
+              <PropertyRef Name="id_check_list" />
+            </Principal>
+            <Dependent Role="Profesional">
+              <PropertyRef Name="Checklist_id_checklist" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gerente_Cliente">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+          <End Role="Gerente" Type="Self.Gerente" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="Gerente">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gerente_Contrato">
+          <End Role="Contrato" Type="Self.Contrato" Multiplicity="1" />
+          <End Role="Gerente" Type="Self.Gerente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contrato">
+              <PropertyRef Name="id_contrato" />
+            </Principal>
+            <Dependent Role="Gerente">
+              <PropertyRef Name="Contrato_id_contrato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Plan_Contrato">
+          <End Role="Contrato" Type="Self.Contrato" Multiplicity="1" />
+          <End Role="Plan" Type="Self.Plan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contrato">
+              <PropertyRef Name="id_contrato" />
+            </Principal>
+            <Dependent Role="Plan">
+              <PropertyRef Name="Contrato_id_contrato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gerente_Solicitud">
+          <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="1" />
+          <End Role="Gerente" Type="Self.Gerente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solicitud">
+              <PropertyRef Name="id_solicitud" />
+            </Principal>
+            <Dependent Role="Gerente">
+              <PropertyRef Name="Solicitud_id_solicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Plan_Pago">
+          <End Role="Pago" Type="Self.Pago" Multiplicity="1" />
+          <End Role="Plan" Type="Self.Plan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pago">
+              <PropertyRef Name="id_pago" />
+            </Principal>
+            <Dependent Role="Plan">
+              <PropertyRef Name="Pago_id_pago" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Accidente_Profesional">
+          <End Role="Profesional" Type="Self.Profesional" Multiplicity="1" />
+          <End Role="Accidente" Type="Self.Accidente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profesional">
+              <PropertyRef Name="id_prof" />
+            </Principal>
+            <Dependent Role="Accidente">
+              <PropertyRef Name="Profesional_id_prof" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profesional_Visita">
+          <End Role="Visita" Type="Self.Visita" Multiplicity="1" />
+          <End Role="Profesional" Type="Self.Profesional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visita">
+              <PropertyRef Name="id_act" />
+            </Principal>
+            <Dependent Role="Profesional">
+              <PropertyRef Name="Visita_id_act" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_NMAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Act_de_mejora" EntityType="Self.Act_de_mejora" />
+          <EntitySet Name="Actividad" EntityType="Self.Actividad" />
+          <EntitySet Name="Administrador" EntityType="Self.Administrador" />
+          <EntitySet Name="Alerta" EntityType="Self.Alerta" />
+          <EntitySet Name="Asesoria" EntityType="Self.Asesoria" />
+          <EntitySet Name="Capacitacion" EntityType="Self.Capacitacion" />
+          <EntitySet Name="Checklist" EntityType="Self.Checklist" />
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+          <EntitySet Name="Contrato" EntityType="Self.Contrato" />
+          <EntitySet Name="Gerente" EntityType="Self.Gerente" />
+          <EntitySet Name="Pago" EntityType="Self.Pago" />
+          <EntitySet Name="Plan" EntityType="Self.Plan" />
+          <EntitySet Name="Profesional" EntityType="Self.Profesional" />
+          <EntitySet Name="Solicitud" EntityType="Self.Solicitud" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Visita" EntityType="Self.Visita" />
+          <EntitySet Name="Accidente" EntityType="Self.Accidente" />
+          <AssociationSet Name="FK_Actividad_Act_de_mejora" Association="Self.FK_Actividad_Act_de_mejora">
+            <End Role="Act_de_mejora" EntitySet="Act_de_mejora" />
+            <End Role="Actividad" EntitySet="Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Actividad_Asesoria" Association="Self.FK_Actividad_Asesoria">
+            <End Role="Asesoria" EntitySet="Asesoria" />
+            <End Role="Actividad" EntitySet="Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Actividad_Capacitacion" Association="Self.FK_Actividad_Capacitacion">
+            <End Role="Capacitacion" EntitySet="Capacitacion" />
+            <End Role="Actividad" EntitySet="Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visita_Actividad" Association="Self.FK_Visita_Actividad">
+            <End Role="Actividad" EntitySet="Actividad" />
+            <End Role="Visita" EntitySet="Visita" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Administrador_Profesional" Association="Self.FK_Administrador_Profesional">
+            <End Role="Profesional" EntitySet="Profesional" />
+            <End Role="Administrador" EntitySet="Administrador" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Accidente_Alerta" Association="Self.FK_Accidente_Alerta">
+            <End Role="Alerta" EntitySet="Alerta" />
+            <End Role="Accidente" EntitySet="Accidente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alerta_Gerente" Association="Self.FK_Alerta_Gerente">
+            <End Role="Gerente" EntitySet="Gerente" />
+            <End Role="Alerta" EntitySet="Alerta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profesional_Checklist" Association="Self.FK_Profesional_Checklist">
+            <End Role="Checklist" EntitySet="Checklist" />
+            <End Role="Profesional" EntitySet="Profesional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gerente_Cliente" Association="Self.FK_Gerente_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Gerente" EntitySet="Gerente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gerente_Contrato" Association="Self.FK_Gerente_Contrato">
+            <End Role="Contrato" EntitySet="Contrato" />
+            <End Role="Gerente" EntitySet="Gerente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Plan_Contrato" Association="Self.FK_Plan_Contrato">
+            <End Role="Contrato" EntitySet="Contrato" />
+            <End Role="Plan" EntitySet="Plan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gerente_Solicitud" Association="Self.FK_Gerente_Solicitud">
+            <End Role="Solicitud" EntitySet="Solicitud" />
+            <End Role="Gerente" EntitySet="Gerente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Plan_Pago" Association="Self.FK_Plan_Pago">
+            <End Role="Pago" EntitySet="Pago" />
+            <End Role="Plan" EntitySet="Plan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Accidente_Profesional" Association="Self.FK_Accidente_Profesional">
+            <End Role="Profesional" EntitySet="Profesional" />
+            <End Role="Accidente" EntitySet="Accidente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profesional_Visita" Association="Self.FK_Profesional_Visita">
+            <End Role="Visita" EntitySet="Visita" />
+            <End Role="Profesional" EntitySet="Profesional" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BD_NMAModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BD_NMAModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BD_NMAModelStoreContainer" CdmEntityContainer="BD_NMAEntities">
+          <EntitySetMapping Name="Act_de_mejora">
+            <EntityTypeMapping TypeName="BD_NMAModel.Act_de_mejora">
+              <MappingFragment StoreEntitySet="Act_de_mejora">
+                <ScalarProperty Name="id_act" ColumnName="id_act" />
+                <ScalarProperty Name="Nombre_act_mejor" ColumnName="Nombre_act_mejor" />
+                <ScalarProperty Name="Descripcion_act_mejora" ColumnName="Descripcion_act_mejora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Actividad">
+            <EntityTypeMapping TypeName="BD_NMAModel.Actividad">
+              <MappingFragment StoreEntitySet="Actividad">
+                <ScalarProperty Name="id_act" ColumnName="id_act" />
+                <ScalarProperty Name="Fecha_act" ColumnName="Fecha_act" />
+                <ScalarProperty Name="Hora_act" ColumnName="Hora_act" />
+                <ScalarProperty Name="Alerta_id_alerta" ColumnName="Alerta_id_alerta" />
+                <ScalarProperty Name="Contador" ColumnName="Contador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Administrador">
+            <EntityTypeMapping TypeName="BD_NMAModel.Administrador">
+              <MappingFragment StoreEntitySet="Administrador">
+                <ScalarProperty Name="id_adm" ColumnName="id_adm" />
+                <ScalarProperty Name="Nombre_adm" ColumnName="Nombre_adm" />
+                <ScalarProperty Name="Direccion_adm" ColumnName="Direccion_adm" />
+                <ScalarProperty Name="Profesional_id_prof" ColumnName="Profesional_id_prof" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Alerta">
+            <EntityTypeMapping TypeName="BD_NMAModel.Alerta">
+              <MappingFragment StoreEntitySet="Alerta">
+                <ScalarProperty Name="id_alerta" ColumnName="id_alerta" />
+                <ScalarProperty Name="Motivo_alerta" ColumnName="Motivo_alerta" />
+                <ScalarProperty Name="Registro" ColumnName="Registro" />
+                <ScalarProperty Name="Gerente_id_emp" ColumnName="Gerente_id_emp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Asesoria">
+            <EntityTypeMapping TypeName="BD_NMAModel.Asesoria">
+              <MappingFragment StoreEntitySet="Asesoria">
+                <ScalarProperty Name="id_act" ColumnName="id_act" />
+                <ScalarProperty Name="Razon_ases" ColumnName="Razon_ases" />
+                <ScalarProperty Name="Estado_caso" ColumnName="Estado_caso" />
+                <ScalarProperty Name="Diligencia" ColumnName="Diligencia" />
+                <ScalarProperty Name="Evento_ases" ColumnName="Evento_ases" />
+                <ScalarProperty Name="Solicitud_id_solicitud" ColumnName="Solicitud_id_solicitud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Capacitacion">
+            <EntityTypeMapping TypeName="BD_NMAModel.Capacitacion">
+              <MappingFragment StoreEntitySet="Capacitacion">
+                <ScalarProperty Name="id_act" ColumnName="id_act" />
+                <ScalarProperty Name="Nombre_cap" ColumnName="Nombre_cap" />
+                <ScalarProperty Name="Asistentes" ColumnName="Asistentes" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Material" ColumnName="Material" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Checklist">
+            <EntityTypeMapping TypeName="BD_NMAModel.Checklist">
+              <MappingFragment StoreEntitySet="Checklist">
+                <ScalarProperty Name="id_check_list" ColumnName="id_check_list" />
+                <ScalarProperty Name="Aspectos" ColumnName="Aspectos" />
+                <ScalarProperty Name="Resporte" ColumnName="Resporte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="BD_NMAModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="id_emp" ColumnName="id_emp" />
+                <ScalarProperty Name="Rut_emp" ColumnName="Rut_emp" />
+                <ScalarProperty Name="Dv_Rut_emp" ColumnName="Dv_Rut_emp" />
+                <ScalarProperty Name="Nombre_emp" ColumnName="Nombre_emp" />
+                <ScalarProperty Name="Direccion_emp" ColumnName="Direccion_emp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contrato">
+            <EntityTypeMapping TypeName="BD_NMAModel.Contrato">
+              <MappingFragment StoreEntitySet="Contrato">
+                <ScalarProperty Name="id_contrato" ColumnName="id_contrato" />
+                <ScalarProperty Name="Vencimiento_cont" ColumnName="Vencimiento_cont" />
+                <ScalarProperty Name="Archivo_pdf" ColumnName="Archivo_pdf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gerente">
+            <EntityTypeMapping TypeName="BD_NMAModel.Gerente">
+              <MappingFragment StoreEntitySet="Gerente">
+                <ScalarProperty Name="id_emp" ColumnName="id_emp" />
+                <ScalarProperty Name="Nombre_gerente" ColumnName="Nombre_gerente" />
+                <ScalarProperty Name="fono_cliente" ColumnName="fono_cliente" />
+                <ScalarProperty Name="direccion_cliente" ColumnName="direccion_cliente" />
+                <ScalarProperty Name="mail_cliente" ColumnName="mail_cliente" />
+                <ScalarProperty Name="Contrato_id_contrato" ColumnName="Contrato_id_contrato" />
+                <ScalarProperty Name="Solicitud_id_solicitud" ColumnName="Solicitud_id_solicitud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pago">
+            <EntityTypeMapping TypeName="BD_NMAModel.Pago">
+              <MappingFragment StoreEntitySet="Pago">
+                <ScalarProperty Name="id_pago" ColumnName="id_pago" />
+                <ScalarProperty Name="Estado_pago" ColumnName="Estado_pago" />
+                <ScalarProperty Name="Mes_pago" ColumnName="Mes_pago" />
+                <ScalarProperty Name="Valor_extra" ColumnName="Valor_extra" />
+                <ScalarProperty Name="Total_a_pagar" ColumnName="Total_a_pagar" />
+                <ScalarProperty Name="Comprobante" ColumnName="Comprobante" />
+                <ScalarProperty Name="Plan_plan_id" ColumnName="Plan_plan_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Plan">
+            <EntityTypeMapping TypeName="BD_NMAModel.Plan">
+              <MappingFragment StoreEntitySet="Plan">
+                <ScalarProperty Name="plan_id" ColumnName="plan_id" />
+                <ScalarProperty Name="Tipo_plan" ColumnName="Tipo_plan" />
+                <ScalarProperty Name="Valor_plan" ColumnName="Valor_plan" />
+                <ScalarProperty Name="Pago_id_pago" ColumnName="Pago_id_pago" />
+                <ScalarProperty Name="Contrato_id_contrato" ColumnName="Contrato_id_contrato" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profesional">
+            <EntityTypeMapping TypeName="BD_NMAModel.Profesional">
+              <MappingFragment StoreEntitySet="Profesional">
+                <ScalarProperty Name="id_prof" ColumnName="id_prof" />
+                <ScalarProperty Name="Rut_prof" ColumnName="Rut_prof" />
+                <ScalarProperty Name="Dv_rut_prof" ColumnName="Dv_rut_prof" />
+                <ScalarProperty Name="Nombre_prof" ColumnName="Nombre_prof" />
+                <ScalarProperty Name="Vigencia_prof" ColumnName="Vigencia_prof" />
+                <ScalarProperty Name="Rendimiento_prof" ColumnName="Rendimiento_prof" />
+                <ScalarProperty Name="Estado_prof" ColumnName="Estado_prof" />
+                <ScalarProperty Name="Fecha_nacimiento_prof" ColumnName="Fecha_nacimiento_prof" />
+                <ScalarProperty Name="Mail_prof" ColumnName="Mail_prof" />
+                <ScalarProperty Name="Asesoria_id_act" ColumnName="Asesoria_id_act" />
+                <ScalarProperty Name="Alerta_id_alerta" ColumnName="Alerta_id_alerta" />
+                <ScalarProperty Name="Visita_id_act" ColumnName="Visita_id_act" />
+                <ScalarProperty Name="Solicitud_id_solicitud" ColumnName="Solicitud_id_solicitud" />
+                <ScalarProperty Name="Checklist_id_checklist" ColumnName="Checklist_id_checklist" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Solicitud">
+            <EntityTypeMapping TypeName="BD_NMAModel.Solicitud">
+              <MappingFragment StoreEntitySet="Solicitud">
+                <ScalarProperty Name="id_solicitud" ColumnName="id_solicitud" />
+                <ScalarProperty Name="Razon_soli" ColumnName="Razon_soli" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BD_NMAModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Visita">
+            <EntityTypeMapping TypeName="BD_NMAModel.Visita">
+              <MappingFragment StoreEntitySet="Visita">
+                <ScalarProperty Name="id_act" ColumnName="id_act" />
+                <ScalarProperty Name="Profesional_id_prof" ColumnName="Profesional_id_prof" />
+                <ScalarProperty Name="Cliente_id_emp" ColumnName="Cliente_id_emp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accidente">
+            <EntityTypeMapping TypeName="BD_NMAModel.Accidente">
+              <MappingFragment StoreEntitySet="Accidente">
+                <ScalarProperty Name="Tipo_acc" ColumnName="Tipo_acc" />
+                <ScalarProperty Name="Descripcion_acc" ColumnName="Descripcion_acc" />
+                <ScalarProperty Name="Gravedad_acc" ColumnName="Gravedad_acc" />
+                <ScalarProperty Name="Alerta_id_alerta" ColumnName="Alerta_id_alerta" />
+                <ScalarProperty Name="Profesional_id_prof" ColumnName="Profesional_id_prof" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="BD_NMAModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="BD_NMAModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="BD_NMAModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="BD_NMAModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_NMAModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="BD_NMAModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_NMAModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="BD_NMAModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="BD_NMAModel.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

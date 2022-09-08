@@ -10,6 +10,9 @@
     <Compile Update="Administrador.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ClienteTarjetaCompleta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Profesional.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Administrador.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ClienteTarjetaCompleta.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

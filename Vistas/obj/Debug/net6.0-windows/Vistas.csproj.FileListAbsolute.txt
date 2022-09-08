@@ -199,3 +199,16 @@ C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMA\Vistas\obj\Debug\net6.0-windows\
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMA\Vistas\obj\Debug\net6.0-windows\TarjetaActividades.g.cs
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMA\Vistas\obj\Debug\net6.0-windows\TarjetaActividades.baml
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO\nma\Vistas\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\TarjetaActividades.g.cs
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\TarjetaActividades.baml
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\ClienteTarjetaCompleta.g.cs
+D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\ClienteTarjetaCompleta.baml
+D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

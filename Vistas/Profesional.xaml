@@ -5,6 +5,8 @@
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:local="clr-namespace:Vistas"
                  xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="Vistas.Profesional"
+                 xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+                 xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
                  mc:Ignorable="d"
                  Title="PROFESIONAL" Height="500" Width="1000"
                  ResizeMode="NoResize"
@@ -46,6 +48,8 @@
                     </Grid>
                 </StackPanel>
             </DockPanel>
+            
+            
             <Grid Margin="10,97,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -210,7 +214,30 @@
                                                            VerticalAlignment="Top" 
                                                            Width="229" 
                                                            Height="29"/>
+                                                    <Grid Margin="0,0,0,-85" >
+                                                        <mah:Tile x:Name="btnOpen" Width="800"
+                                                                  Height="20"
+                                                                  Command="{Binding EditDetailCommand}" 
+                                                                  ToolTip="Edit" Style="{DynamicResource buttonstyle}"
+                                                                  VerticalAlignment="Top"
+                                                                  Margin="16,64,17,0"
+                                                                  Background="Transparent" BorderBrush="#FFADA9A9"
+                                                                  Click="btnOpen_Click">
+                                                            <Image Source="Recursos/Iconos/GRIS/icons8-chevron-down-50.png"></Image>
+                                                        </mah:Tile>
+                                                    </Grid>
                                                 </Grid>
+                                                <mah:FlyoutsControl Width="auto" 
+                                                                            Height="auto" 
+                                                                            Margin="0,80,0,-181"
+                                                                            >
+                                                    <mah:Flyout x:Name="flyout" 
+                                                                        Position="Bottom" 
+                                                                        CloseButtonVisibility="Hidden"  
+                                                                        VerticalAlignment="Bottom" 
+                                                                        HorizontalAlignment="Center">
+                                                    </mah:Flyout>
+                                                </mah:FlyoutsControl>
                                                 <Grid x:Name="gridTarjAct_Copy" 
                                                     Height="95" 
                                                     Width="833">
@@ -621,88 +648,6 @@
                                                         Width="229" 
                                                         Height="29"/>
                                                 </Grid>
-                                                <Grid x:Name="gridTarjAct_Copy5" 
-                                                    Height="95" 
-                                                    Width="833">
-                                                    <Image x:Name="sombra6" 
-                                                        Margin="-15,75,-17,-15" 
-                                                        Source="/pngegg.png" 
-                                                        Stretch="Fill">
-                                                        <Image.OpacityMask>
-                                                            <SolidColorBrush Color="Black" 
-                                                                Opacity="0.6"/>
-                                                        </Image.OpacityMask>
-                                                    </Image>
-                                                    <Label x:Name="lblClienteEmpresa6" 
-                                                        Content="CCU" 
-                                                        FontSize="25" 
-                                                        Margin="0,20,750,0" 
-                                                        RenderTransformOrigin="0.5,0.5" 
-                                                        HorizontalContentAlignment="Center" 
-                                                        VerticalContentAlignment="Center"
-                                                        Height="45" 
-                                                        VerticalAlignment="Top"/>
-                                                    <Label x:Name="lblClienteRut6" 
-                                                        Content="94413000-1" 
-                                                        Margin="10,50,0,0"
-                                                        VerticalAlignment="Top" 
-                                                        HorizontalAlignment="Left" 
-                                                        Height="30"
-                                                        FontSize="12"/>
-                                                    <Label x:Name="lblGerenteEmpresa6" 
-                                                        Content="GERENTE" 
-                                                        Margin="95,0,660,65"/>
-                                                    <Label x:Name="lblProfHead6"
-                                                        Content="PROFESIONAL"
-                                                        Margin="200,0,500,60"/>
-                                                    <Label x:Name="lblNombreProf6"
-                                                        Margin="200,30,520,30"
-                                                        Content="Gabriel Boric"
-                                                        FontSize="15"/>
-                                                    <Label x:Name="lblNombreGerente6" 
-                                                        Content="Willson Fisk" 
-                                                        Margin="95,0,0,0" 
-                                                        FontSize="15" 
-                                                        HorizontalAlignment="Left" 
-                                                        VerticalAlignment="Center" 
-                                                        Height="36" 
-                                                        Width="100"/>
-                                                    <Label x:Name="lblMailHead6" 
-                                                        Content="MAIL" 
-                                                        Margin="330,0,430,61"/>
-                                                    <Label x:Name="mailGerente6" 
-                                                        Content="will.fisk@gmail.com" 
-                                                        Margin="329,28,0,0" 
-                                                        FontSize="15" 
-                                                        HorizontalAlignment="Left" 
-                                                        VerticalAlignment="Top" 
-                                                        Height="36" 
-                                                        Width="199"/>
-                                                    <Label x:Name="lblFonoHead6"
-                                                        Content="TELÉFONO"
-                                                        Margin="485,0,200,0"/>
-                                                    <Label x:Name="lblFono6"
-                                                        Content="(2) 2623 2181"
-                                                        Margin="485,30,200,0"
-                                                        FontSize="15"/>
-                                                    <Label x:Name="lblHeadDireccion6" 
-                                                        Content="DIRECCIÓN" 
-                                                        Margin="603,3,136,0" 
-                                                        Background="{x:Null}" 
-                                                        FontSize="15" 
-                                                        FontWeight="Bold" 
-                                                        FontFamily="Global Sans Serif" 
-                                                        VerticalAlignment="Top" 
-                                                        Height="28"  />
-                                                    <Label x:Name="lblDireccion6" 
-                                                        Content="Panamericana Nte. 8500, Quilicura" 
-                                                        Margin="603,29,0,0" 
-                                                        FontSize="14" 
-                                                        HorizontalAlignment="Left" 
-                                                        VerticalAlignment="Top" 
-                                                        Width="229" 
-                                                        Height="29"/>
-                                                </Grid>
                                             </StackPanel>
                                         </ScrollViewer>
                                     </TabItem>
@@ -745,7 +690,7 @@
                                 <TabControl x:Name="TabControlRevisarAct" 
                                             FontSize="12" 
                                             mah:HeaderedControlHelper.HeaderFontSize="20" 
-                                            Margin="0,10,0,-85" 
+                                            Margin="0,10,0,10" 
                                             FontWeight="SemiBold">
                                     <TabControl.Background>
                                         <SolidColorBrush Color="White" 
@@ -776,59 +721,14 @@
                                             </LinearGradientBrush>
                                         </mah:TabControlHelper.UnderlineMouseOverBrush>
                                         <Grid Margin="-4,0,38,48" 
-                                              Height="399" >
-                                            <Rectangle HorizontalAlignment="Center" 
-                                                       Height="100" 
-                                                       Margin="0,1,0,0" 
-                                                       Stroke="Black" 
-                                                       VerticalAlignment="Top" 
-                                                       Width="766" 
-                                                       OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-                                            <Image Margin="-15,87,-17,258" 
-                                                   Source="/pngegg.png" 
-                                                   Stretch="Fill">
-                                                <Image.OpacityMask>
-                                                    <SolidColorBrush Color="Black" 
-                                                                     Opacity="0.6"/>
-                                                </Image.OpacityMask>
-                                            </Image>
-                                            <Rectangle HorizontalAlignment="Center" 
-                                                       Height="100" 
-                                                       Margin="0,115,0,0" 
-                                                       Stroke="Black" 
-                                                       VerticalAlignment="Top" 
-                                                       Width="766" 
-                                                       OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-                                            <Image Margin="-16,201,-16,144" 
-                                                   Source="/pngegg.png" 
-                                                   Stretch="Fill">
-                                                <Image.OpacityMask>
-                                                    <SolidColorBrush Color="Black" 
-                                                                     Opacity="0.6"/>
-                                                </Image.OpacityMask>
-                                            </Image>
-                                            <Image Margin="-16,319,-16,26" 
-                                                   Source="/pngegg.png" 
-                                                   Stretch="Fill">
-                                                <Image.OpacityMask>
-                                                    <SolidColorBrush Color="Black" 
-                                                                     Opacity="0.6"/>
-                                                </Image.OpacityMask>
-                                            </Image>
-                                            <Rectangle HorizontalAlignment="Center" 
-                                                       Height="100" 
-                                                       Margin="0,233,0,0" 
-                                                       Stroke="Black" 
-                                                       VerticalAlignment="Top" 
-                                                       Width="766" 
-                                                       OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
+                                              Height="800"
+                                              Width="800">
                                         </Grid>
                                     </TabItem>
                                 </TabControl>
                             </Grid>
                         </Grid>
                     </TabItem>
-
                 </TabControl>
             </Grid>
             <Rectangle HorizontalAlignment="Left" Height="365" Margin="143,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="1" Opacity="0.085"/>

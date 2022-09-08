@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("recursos/iconos/icons8-black-tie-50.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("microsoft.testplatform.adapterutilities.resources.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("microsoft.visualstudio.testplatform.mstest.testadapter.resources.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("microsoft.visualstudio.testplatform.mstestadapter.platformservices.resources.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("microsoft.visualstudio.testplatform.testframework.resources.dll")]
 
 

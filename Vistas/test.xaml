@@ -6,11 +6,136 @@
                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                   xmlns:local="clr-namespace:Vistas"
                   mc:Ignorable="d"
-                  Title="test" Height="450" Width="800"
+                  Title="test" Height="500" Width="1000"
                   WindowStyle="None"
                   Background="Transparent"
-                  AllowsTransparency="True">
-    <Border>
-        
+                  AllowsTransparency="True"
+                  ShowCloseButton="False"
+                  ShowTitleBar="False"
+                  WindowStartupLocation="CenterScreen"
+                  ShowMaxRestoreButton="False"
+                  ShowMinButton="False">
+
+    <Border Background="White">
+        <DockPanel LastChildFill="False">
+            <StackPanel DockPanel.Dock="Top"
+                        Width="1000"
+                        Height="40"
+                        Background="#FF4E16D1">
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Left"
+                        Width="150"
+                        Background="White">
+                <Grid Width="150"
+                      Height="460">
+                    <TabItem x:Name="tabItemClientes"
+                             Header="Clientes"
+                             mah:HeaderedControlHelper.HeaderFontSize="15"
+                             mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Right" 
+                             Grid.IsSharedSizeScope="True" 
+                             Padding="26,6,6,2" 
+                             RenderTransformOrigin="0.5,0.5" 
+                             mah:HeaderedControlHelper.HeaderForeground="Black"
+                             Margin="10,0,0,420" GotFocus="tabItemClientes_GotFocus"
+                             >
+                        <TabItem.Background>
+                            <ImageBrush Stretch="Uniform" 
+                                        ImageSource="/Recursos/Iconos/PURPURA/icons8-user-groups-50.png">
+                                <ImageBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterX="0.5" 
+                                                        CenterY="0.5" 
+                                                        ScaleX="0.6" 
+                                                        ScaleY="0.6"/>
+                                        <SkewTransform CenterX="0.5" 
+                                                       CenterY="0.5"/>
+                                        <RotateTransform CenterY="0.5" 
+                                                         CenterX="0.5"/>
+                                        <TranslateTransform X="-0.42" 
+                                                            Y="-0.15"/>
+                                    </TransformGroup>
+                                </ImageBrush.RelativeTransform>
+                            </ImageBrush>
+                        </TabItem.Background>
+                    </TabItem>
+                    <TabItem x:Name="TabitemProfesionales" 
+                             Header="Profesionales"
+                             mah:HeaderedControlHelper.HeaderFontSize="15"
+                             mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Right"
+                             Grid.IsSharedSizeScope="True" 
+                             Padding="26,15,0,0" 
+                             RenderTransformOrigin="0.5,0.5" 
+                             Margin="10,26,0,371" GotFocus="TabitemProfesionales_GotFocus">
+                        <TabItem.Background>
+                            <ImageBrush Stretch="Uniform" 
+                                        ImageSource="/Recursos/Iconos/PURPURA/icons8-administrator-male-50.png">
+                                <ImageBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterX="0.5" 
+                                                        CenterY="0.5" 
+                                                        ScaleX="0.6" 
+                                                        ScaleY="0.6"/>
+                                        <SkewTransform CenterX="0.5" 
+                                                       CenterY="0.5"/>
+                                        <RotateTransform CenterY="0.5" 
+                                                         CenterX="0.5"/>
+                                        <TranslateTransform X="-0.42" 
+                                                            Y="-0.15"/>
+                                    </TransformGroup>
+                                </ImageBrush.RelativeTransform>
+                            </ImageBrush>
+                        </TabItem.Background>
+                    </TabItem>
+                </Grid>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Bottom"
+                        Height="400"
+                        Width="850"
+                        Background="blue">
+                <Border Height="380"
+                        Width="830"
+                        Margin="5,10,0,0"
+                        BorderThickness="5"
+                        BorderBrush="Black">
+                    <TabControl x:Name="tabControlRevision" Margin="-5,-15,-5,-10">
+                        <ScrollViewer Height="360" Margin="0,0,11,0">
+                            <StackPanel x:Name="stckPanelTarjetasCliente"
+                                        Height="auto"
+                                        Width="auto"
+                                        VerticalAlignment="Top">
+                                <local:ClienteTarjetaCompleta displayEmpresa="CCU"
+                                                              displayRutEmpresa="90413000-1"
+                                                              displayGerente="Willson Fisk"
+                                                              displayProfNombre="Gabriel Boric"
+                                                              displayMailGerente="will.fisk@gmail.com"
+                                                              displayTelefonoEmpresa="(2) 2623 2181"
+                                                              displayDireccion="Panamericana 30000"></local:ClienteTarjetaCompleta>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabControl>
+                </Border>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right"
+                        Width="850"
+                        Background="Yellow">
+                <DockPanel>
+                    <Grid x:Name="gridOpcionesTabItem" DockPanel.Dock="Left"
+                          Height="60"
+                          Width="425">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <TabControl x:Name="tbControlSecondOpcionesTabItem"  
+                                    Grid.ColumnSpan="2">
+                        </TabControl>
+                    </Grid>
+                    <Grid DockPanel.Dock="Right"
+                          Height="60"
+                          Width="425">
+                    </Grid>
+                </DockPanel>
+            </StackPanel>
+        </DockPanel>
     </Border>
 </mah:MetroWindow>

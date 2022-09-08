@@ -27,6 +27,7 @@ namespace Vistas
         String password = "123";
         String exampleUserProfesional = "prof";
         String examplePasswordProfesional = "123";
+        String testname = "test";
         public MainWindow()
         {
             InitializeComponent();
@@ -45,6 +46,12 @@ namespace Vistas
             else if (usuarioLogin.Text.Equals(exampleUserProfesional) && contrasenaLogin.Password.Equals(examplePasswordProfesional))
             {
                 Profesional prof = new Profesional();
+                this.Close();
+                prof.ShowDialog();
+            }
+            else if (usuarioLogin.Text.Equals(testname))
+            {
+                test prof = new test();
                 this.Close();
                 prof.ShowDialog();
             }

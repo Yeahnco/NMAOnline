@@ -1,0 +1,288 @@
+﻿<UserControl x:Name="ucVentana" x:Class="Vistas.ClienteTarjetaCompleta"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             mc:Ignorable="d" 
+             d:DesignHeight="315" d:DesignWidth="830">
+    
+    <Border Background="White">
+        <Grid x:Name="gridVentanaCompleta" Initialized="gridVentanaCompleta_Initialized">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <DockPanel x:Name="dockPanelSuperior" 
+                       LastChildFill="False"
+                       Grid.Row="0">
+                <StackPanel Width="100" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid Height="70">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="63*"/>
+                            <RowDefinition Height="37*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblEmpresa" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="30" 
+                               FontWeight="Bold" 
+                               Height="50" 
+                               Width="auto"
+                               Grid.Row="0"
+                               Content="{Binding displayEmpresa, TargetNullValue=''}"></Label>
+                        <TextBlock x:Name="txtblockRutEmpresa"
+                                   Grid.Row="1"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" 
+                                   Height="20" 
+                                   Width="86"
+                                   Text="{Binding displayRutEmpresa, TargetNullValue=''}"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="120" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid Height="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblGerente" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="GERENTE"></Label>
+                        <TextBlock x:Name="txtblockNombreGerente"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row="1"
+                                   FontSize="12"
+                                   Text="{Binding displayGerente, TargetNullValue=''}"
+                                   ></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="110" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid Height="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblProfNombre"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Grid.Row="0"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Content="PROFESIONAL"></Label>
+                        <TextBlock x:Name="txtblockProfNombre"
+                                   Grid.Row="1"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   Text="{Binding displayProfNombre, TargetNullValue=''}"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="195" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid Height="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblMailGerente"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15"
+                               Grid.Row="0"
+                               FontWeight="Bold"
+                               Content="MAIL"></Label>
+                        <TextBlock x:Name="txtblockMailGerente"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row="1"
+                                   FontSize="12"
+                                   TextDecorations="Underline"
+                                   Text="{Binding displayMailGerente, TargetNullValue=''}"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="105" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid Height="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblTelefono"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Grid.Row="0"
+                               Content="TELÉFONO">
+                        </Label>
+                        <TextBlock x:Name="txtblockTelefonoEmpresa"
+                                   Grid.Row="1"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   Text="{Binding displayTelefonoEmpresa, TargetNullValue=''}"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="200" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid Height="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblDireccionEmpresa"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Content="DIRECCIÓN"></Label>
+                        <TextBlock x:Name="txtblock"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   Grid.Row="1"
+                                   Text="{Binding displayDireccion, TargetNullValue=''}"></TextBlock>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel x:Name="dockPanelMedio" 
+                       LastChildFill="False"
+                       Grid.Row="1">
+                <StackPanel x:Name="stckPanelClienteInfo2">
+                    <Grid Width="830"
+                      Height="100">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="VISITA" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="0"
+                               FontSize="12"></Label>
+                        <StackPanel VerticalAlignment="Bottom">
+                            <DatePicker Height="30"
+                                        Width="150"
+                                        Grid.Column="0"/>
+                            <mah:TimePicker Height="30"
+                                            Width="150"
+                                            Grid.Column="0"/>
+                        </StackPanel>
+                        <Label Content="CAPACITACIÓN" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="1"
+                               FontSize="12"></Label>
+                        <ListBox Height="30"
+                             Width="150"
+                             Grid.Column="1">
+                            <ListBoxItem Content="Ejemplo1"></ListBoxItem>
+                            <ListBoxItem Content="Ejemplo2"></ListBoxItem>
+                            <ListBoxItem Content="Ejemplo2"></ListBoxItem>
+                        </ListBox>
+
+                        <Label Content="ASESORÍA" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="2"
+                               FontSize="12"></Label>
+                        <ListBox Height="30"
+                             Width="150"
+                             Grid.Column="2">
+                            <ListBoxItem Content="Ejemplo1"></ListBoxItem>
+                            <ListBoxItem Content="Ejemplo2"></ListBoxItem>
+                            <ListBoxItem Content="Ejemplo2"></ListBoxItem>
+                        </ListBox>
+                        <Label Content="ACTIVIDAD DE MEJORA" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="3"
+                               FontSize="12"></Label>
+                        <TextBlock Text="Comprar indumentaria de seguridad"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Grid.Column="3"
+                                       FontSize="10"></TextBlock>
+                    </Grid>
+                    <Grid Width="830"
+                      Height="50">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="25*"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="ACCIDENTABILIDAD" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Grid.Row="0"
+                               FontSize="12"></Label>
+                        <TextBlock Text="⚠%5"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row="1"></TextBlock>
+                    </Grid>
+                    <Grid Width="830"
+                      Height="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                        </Grid.ColumnDefinitions>
+                        <mah:Tile Grid.Column="0" 
+                                  Height="30" 
+                                  Content="AGREGAR VISITA" 
+                                  FontWeight="Bold" 
+                                  FontSize="10"/>
+                        <mah:Tile Grid.Column="1" 
+                                  Height="30" 
+                                  Content="AGREGAR CAPACITACIÓN" 
+                                  FontWeight="Bold" 
+                                  FontSize="10"/>
+                        <mah:Tile Grid.Column="2" 
+                                  Height="30" 
+                                  Content="AGREGAR ASESORIA" 
+                                  FontWeight="Bold" 
+                                  FontSize="10"/>
+                        <mah:Tile Grid.Column="3" 
+                                  Height="30" 
+                                  Content="AGREGAR ACTV. MEJORA" 
+                                  FontWeight="Bold" 
+                                  FontSize="10"/>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+            <Button x:Name="btnUpdDown" 
+                    Width="auto"
+                    Height="10"
+                    VerticalAlignment="Bottom"
+                    Content="up/donw" 
+                    Click="Button_Click"
+                    Grid.Row="3"/>
+        </Grid>
+    </Border>
+</UserControl>
