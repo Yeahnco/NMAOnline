@@ -39,15 +39,6 @@ namespace Vistas
         {
             if (usuarioLogin.Text.Equals(username) && contrasenaLogin.Password.Equals(password))
             {
-                Administrador admini = new Administrador();
-                this.Close();
-                admini.ShowDialog();
-            }
-            else if (usuarioLogin.Text.Equals(exampleUserProfesional) && contrasenaLogin.Password.Equals(examplePasswordProfesional))
-            {
-                Profesional prof = new Profesional();
-                this.Close();
-                prof.ShowDialog();
             }
             else if (usuarioLogin.Text.Equals(testname))
             {

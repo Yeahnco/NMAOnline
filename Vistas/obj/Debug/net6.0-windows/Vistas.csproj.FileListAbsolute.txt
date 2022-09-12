@@ -103,13 +103,11 @@ D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\MahApps.Metro.IconPacks.
 D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
 D:\Projects\NMA_Project\Vistas\bin\Debug\net6.0-windows\de\MahApps.Metro.resources.dll
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Vistas.csproj.AssemblyReference.cache
-D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Administrador.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\App.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Vistas_MarkupCompile.cache
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Vistas_MarkupCompile.lref
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\App.baml
-D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Administrador.baml
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\MainWindow.baml
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Vistas.g.resources
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Vistas.GeneratedMSBuildEditorConfig.editorconfig
@@ -122,8 +120,6 @@ D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\refint\Vistas.dll
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Vistas.pdb
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Vistas.genruntimeconfig.cache
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\ref\Vistas.dll
-D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Profesional.g.cs
-D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\Profesional.baml
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\test.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\test.baml
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMAmvc\NMA\Vistas\obj\Debug\net6.0-windows\Profesional.g.cs
@@ -199,8 +195,6 @@ C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMA\Vistas\obj\Debug\net6.0-windows\
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMA\Vistas\obj\Debug\net6.0-windows\TarjetaActividades.g.cs
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO\NMA\Vistas\obj\Debug\net6.0-windows\TarjetaActividades.baml
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO\nma\Vistas\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\TarjetaActividades.g.cs
-D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\TarjetaActividades.baml
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\ClienteTarjetaCompleta.g.cs
 D:\Projects\NMA_Project\Vistas\obj\Debug\net6.0-windows\ClienteTarjetaCompleta.baml

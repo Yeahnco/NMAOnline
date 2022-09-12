@@ -22,6 +22,30 @@
                         Width="1000"
                         Height="40"
                         Background="#FF4E16D1">
+                <Grid Height="auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Title"
+                           Grid.Column="0"
+                           Content="NMA"
+                           Foreground="White"
+                           FontWeight="Black"
+                           FontSize="20"
+                           Width="60"
+                           HorizontalAlignment="Left">
+                    </Label>
+                    <mah:Tile x:Name="tileSalir"
+                              Grid.Column="2"
+                              Height="25"
+                              Width="25"
+                              Background="Transparent"
+                              HorizontalAlignment="Right" Click="tileSalir_Click">
+                        <Image Source="Recursos/Iconos/BLANCO/icons8-exit-96.png"></Image>
+                    </mah:Tile>
+                </Grid>
             </StackPanel>
             <StackPanel DockPanel.Dock="Left"
                         Width="150"
@@ -36,8 +60,8 @@
                              Padding="26,6,6,2" 
                              RenderTransformOrigin="0.5,0.5" 
                              mah:HeaderedControlHelper.HeaderForeground="Black"
-                             Margin="10,0,0,420" GotFocus="tabItemClientes_GotFocus"
-                             >
+                             Margin="10,0,0,420" 
+                             GotFocus="tabItemClientes_GotFocus">
                         <TabItem.Background>
                             <ImageBrush Stretch="Uniform" 
                                         ImageSource="/Recursos/Iconos/PURPURA/icons8-user-groups-50.png">
@@ -65,7 +89,8 @@
                              Grid.IsSharedSizeScope="True" 
                              Padding="26,15,0,0" 
                              RenderTransformOrigin="0.5,0.5" 
-                             Margin="10,26,0,371" GotFocus="TabitemProfesionales_GotFocus">
+                             Margin="10,26,0,371" 
+                             GotFocus="TabitemProfesionales_GotFocus">
                         <TabItem.Background>
                             <ImageBrush Stretch="Uniform" 
                                         ImageSource="/Recursos/Iconos/PURPURA/icons8-administrator-male-50.png">
@@ -91,14 +116,16 @@
             <StackPanel DockPanel.Dock="Bottom"
                         Height="400"
                         Width="850"
-                        Background="blue">
+                        Background="White">
                 <Border Height="380"
                         Width="830"
                         Margin="5,10,0,0"
                         BorderThickness="5"
                         BorderBrush="Black">
-                    <TabControl x:Name="tabControlRevision" Margin="-5,-15,-5,-10">
-                        <ScrollViewer Height="360" Margin="0,0,11,0">
+                    <TabControl x:Name="tbControlClienteData" Margin="-5,-15,-5,-10">
+                        <ScrollViewer x:Name="scrlViewerOpcion1Cliente" 
+                                      Height="360" 
+                                      Margin="0,0,11,0">
                             <StackPanel x:Name="stckPanelTarjetasCliente"
                                         Height="auto"
                                         Width="auto"
@@ -117,7 +144,7 @@
             </StackPanel>
             <StackPanel DockPanel.Dock="Right"
                         Width="850"
-                        Background="Yellow">
+                        Background="White">
                 <DockPanel>
                     <Grid x:Name="gridOpcionesTabItem" DockPanel.Dock="Left"
                           Height="60"
@@ -128,7 +155,33 @@
                         </Grid.ColumnDefinitions>
                         <TabControl x:Name="tbControlSecondOpcionesTabItem"  
                                     Grid.ColumnSpan="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TabItem x:Name="tbItemOpciones1"
+                                         Grid.Column="0"
+                                         Height="60"
+                                         Width="110"
+                                         mah:HeaderedControlHelper.HeaderFontSize="15"
+                                         Header="HEADER1" GotFocus="tbItemOpciones1_GotFocus"/>
+                                <TabItem x:Name="tbItemOpciones2" 
+                                         Grid.Column="1"
+                                         Height="60"
+                                         Width="110"
+                                         mah:HeaderedControlHelper.HeaderFontSize="15"
+                                         Header="HEADER2"/>
+                                <TabItem x:Name="tbItemOpciones3" 
+                                         Grid.Column="2"
+                                         Height="60"
+                                         Width="110"
+                                         mah:HeaderedControlHelper.HeaderFontSize="15"
+                                         Header="HEADER3"/>
+                            </Grid>
                         </TabControl>
+                            
                     </Grid>
                     <Grid DockPanel.Dock="Right"
                           Height="60"

@@ -184,10 +184,12 @@
                         <StackPanel VerticalAlignment="Bottom">
                             <DatePicker Height="30"
                                         Width="150"
-                                        Grid.Column="0"/>
+                                        Grid.Column="0"
+                                        IsEnabled="False"/>
                             <mah:TimePicker Height="30"
                                             Width="150"
-                                            Grid.Column="0"/>
+                                            Grid.Column="0"
+                                            IsEnabled="False"/>
                         </StackPanel>
                         <Label Content="CAPACITACIÓN" 
                                FontWeight="Black" 
@@ -196,8 +198,9 @@
                                Grid.Column="1"
                                FontSize="12"></Label>
                         <ListBox Height="30"
-                             Width="150"
-                             Grid.Column="1">
+                                 Width="150"
+                                 Grid.Column="1"
+                                 IsEnabled="False">
                             <ListBoxItem Content="Ejemplo1"></ListBoxItem>
                             <ListBoxItem Content="Ejemplo2"></ListBoxItem>
                             <ListBoxItem Content="Ejemplo2"></ListBoxItem>
@@ -210,8 +213,9 @@
                                Grid.Column="2"
                                FontSize="12"></Label>
                         <ListBox Height="30"
-                             Width="150"
-                             Grid.Column="2">
+                                 Width="150"
+                                 Grid.Column="2"
+                                 IsEnabled="False">
                             <ListBoxItem Content="Ejemplo1"></ListBoxItem>
                             <ListBoxItem Content="Ejemplo2"></ListBoxItem>
                             <ListBoxItem Content="Ejemplo2"></ListBoxItem>
