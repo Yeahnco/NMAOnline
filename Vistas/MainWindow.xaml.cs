@@ -27,20 +27,20 @@ namespace Vistas
         String password = "123";
         String exampleUserProfesional = "prof";
         String examplePasswordProfesional = "123";
-        String testname = "test";
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = "NMA";
-            
         }
 
         private async void ValidarLogin()
         {
             if (usuarioLogin.Text.Equals(username) && contrasenaLogin.Password.Equals(password))
             {
+                Administrador admini = new Administrador();
+                this.Close();
+                admini.ShowDialog();
             }
-            else if (usuarioLogin.Text.Equals(testname))
+            else if (usuarioLogin.Text.Equals(exampleUserProfesional) && contrasenaLogin.Password.Equals(examplePasswordProfesional))
             {
                 test prof = new test();
                 this.Close();

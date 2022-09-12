@@ -8,9 +8,11 @@
     ".NETCoreApp,Version=v6.0": {
       "Vistas/1.0.0": {
         "dependencies": {
+          "Controladores": "1.0.0",
           "EntityFramework": "6.4.4",
           "MahApps.Metro": "2.4.9",
           "MahApps.Metro.IconPacks": "4.11.0",
+          "PersistenciaBD": "1.0.0",
           "autosize": "3.0.8"
         },
         "runtime": {
@@ -316,6 +318,23 @@
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
         }
+      },
+      "Controladores/1.0.0": {
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "MahApps.Metro": "2.4.9",
+          "MahApps.Metro.IconPacks": "4.11.0",
+          "PersistenciaBD": "1.0.0",
+          "autosize": "3.0.8"
+        },
+        "runtime": {
+          "Controladores.dll": {}
+        }
+      },
+      "PersistenciaBD/1.0.0": {
+        "runtime": {
+          "PersistenciaBD.dll": {}
+        }
       }
     }
   },
@@ -499,6 +518,16 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "Controladores/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersistenciaBD/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

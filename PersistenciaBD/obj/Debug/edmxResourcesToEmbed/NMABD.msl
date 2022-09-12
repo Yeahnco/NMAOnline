@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_NMAModelStoreContainer" CdmEntityContainer="BD_NMAEntities">
+    <EntitySetMapping Name="Actividad">
+      <EntityTypeMapping TypeName="BD_NMAModel.Actividad">
+        <MappingFragment StoreEntitySet="Actividad">
+          <ScalarProperty Name="id_act" ColumnName="id_act" />
+          <ScalarProperty Name="Fecha_act" ColumnName="Fecha_act" />
+          <ScalarProperty Name="Hora_act" ColumnName="Hora_act" />
+          <ScalarProperty Name="Contador" ColumnName="Contador" />
+          <ScalarProperty Name="Prof_id_profe" ColumnName="Prof_id_profe" />
+          <ScalarProperty Name="Cliente_id_emp" ColumnName="Cliente_id_emp" />
+          <ScalarProperty Name="Tipo_actividad" ColumnName="Tipo_actividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Administrador">
+      <EntityTypeMapping TypeName="BD_NMAModel.Administrador">
+        <MappingFragment StoreEntitySet="Administrador">
+          <ScalarProperty Name="id_adm" ColumnName="id_adm" />
+          <ScalarProperty Name="Nombre_adm" ColumnName="Nombre_adm" />
+          <ScalarProperty Name="Direccion_adm" ColumnName="Direccion_adm" />
+          <ScalarProperty Name="Profesional_id_prof" ColumnName="Profesional_id_prof" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alerta">
+      <EntityTypeMapping TypeName="BD_NMAModel.Alerta">
+        <MappingFragment StoreEntitySet="Alerta">
+          <ScalarProperty Name="id_alerta" ColumnName="id_alerta" />
+          <ScalarProperty Name="Motivo_alerta" ColumnName="Motivo_alerta" />
+          <ScalarProperty Name="Registro" ColumnName="Registro" />
+          <ScalarProperty Name="Gerente_id_emp" ColumnName="Gerente_id_emp" />
+          <ScalarProperty Name="Cliente_id_emp" ColumnName="Cliente_id_emp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Checklist">
+      <EntityTypeMapping TypeName="BD_NMAModel.Checklist">
+        <MappingFragment StoreEntitySet="Checklist">
+          <ScalarProperty Name="id_checklist" ColumnName="id_checklist" />
+          <ScalarProperty Name="Aspectos" ColumnName="Aspectos" />
+          <ScalarProperty Name="Resporte" ColumnName="Resporte" />
+          <ScalarProperty Name="Visita_id_visi" ColumnName="Visita_id_visi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="BD_NMAModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="id_emp" ColumnName="id_emp" />
+          <ScalarProperty Name="Rut_emp" ColumnName="Rut_emp" />
+          <ScalarProperty Name="Dv_Rut_emp" ColumnName="Dv_Rut_emp" />
+          <ScalarProperty Name="Nombre_emp" ColumnName="Nombre_emp" />
+          <ScalarProperty Name="Direccion_emp" ColumnName="Direccion_emp" />
+          <ScalarProperty Name="Profesional_id_prof" ColumnName="Profesional_id_prof" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrato">
+      <EntityTypeMapping TypeName="BD_NMAModel.Contrato">
+        <MappingFragment StoreEntitySet="Contrato">
+          <ScalarProperty Name="id_contrato" ColumnName="id_contrato" />
+          <ScalarProperty Name="Vencimiento_cont" ColumnName="Vencimiento_cont" />
+          <ScalarProperty Name="Archivo_pdf" ColumnName="Archivo_pdf" />
+          <ScalarProperty Name="Gerente_id_gerente" ColumnName="Gerente_id_gerente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gerente">
+      <EntityTypeMapping TypeName="BD_NMAModel.Gerente">
+        <MappingFragment StoreEntitySet="Gerente">
+          <ScalarProperty Name="id_gerente" ColumnName="id_gerente" />
+          <ScalarProperty Name="Nombre_gerente" ColumnName="Nombre_gerente" />
+          <ScalarProperty Name="Fono_cliente" ColumnName="Fono_cliente" />
+          <ScalarProperty Name="Direccion_cliente" ColumnName="Direccion_cliente" />
+          <ScalarProperty Name="Mail_cliente" ColumnName="Mail_cliente" />
+          <ScalarProperty Name="Contrato_id_contrato" ColumnName="Contrato_id_contrato" />
+          <ScalarProperty Name="Cliente_id_clien" ColumnName="Cliente_id_clien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pago">
+      <EntityTypeMapping TypeName="BD_NMAModel.Pago">
+        <MappingFragment StoreEntitySet="Pago">
+          <ScalarProperty Name="id_pago" ColumnName="id_pago" />
+          <ScalarProperty Name="Estado_pago" ColumnName="Estado_pago" />
+          <ScalarProperty Name="Mes_pago" ColumnName="Mes_pago" />
+          <ScalarProperty Name="Valor_extra" ColumnName="Valor_extra" />
+          <ScalarProperty Name="Total_a_pagar" ColumnName="Total_a_pagar" />
+          <ScalarProperty Name="Comprobante" ColumnName="Comprobante" />
+          <ScalarProperty Name="Plan_plan_id" ColumnName="Plan_plan_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plan">
+      <EntityTypeMapping TypeName="BD_NMAModel.Plan">
+        <MappingFragment StoreEntitySet="Plan">
+          <ScalarProperty Name="plan_id" ColumnName="plan_id" />
+          <ScalarProperty Name="Tipo_plan" ColumnName="Tipo_plan" />
+          <ScalarProperty Name="Valor_plan" ColumnName="Valor_plan" />
+          <ScalarProperty Name="Pago_id_pago" ColumnName="Pago_id_pago" />
+          <ScalarProperty Name="Contrato_id_contrato" ColumnName="Contrato_id_contrato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesional">
+      <EntityTypeMapping TypeName="BD_NMAModel.Profesional">
+        <MappingFragment StoreEntitySet="Profesional">
+          <ScalarProperty Name="id_prof" ColumnName="id_prof" />
+          <ScalarProperty Name="Rut_prof" ColumnName="Rut_prof" />
+          <ScalarProperty Name="Dv_rut_prof" ColumnName="Dv_rut_prof" />
+          <ScalarProperty Name="Nombre_prof" ColumnName="Nombre_prof" />
+          <ScalarProperty Name="Rendimiento_prof" ColumnName="Rendimiento_prof" />
+          <ScalarProperty Name="Estado_prof" ColumnName="Estado_prof" />
+          <ScalarProperty Name="Fecha_nacimiento_prof" ColumnName="Fecha_nacimiento_prof" />
+          <ScalarProperty Name="Mail_prof" ColumnName="Mail_prof" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud">
+      <EntityTypeMapping TypeName="BD_NMAModel.Solicitud">
+        <MappingFragment StoreEntitySet="Solicitud">
+          <ScalarProperty Name="id_solicitud" ColumnName="id_solicitud" />
+          <ScalarProperty Name="Razon_soli" ColumnName="Razon_soli" />
+          <ScalarProperty Name="Profesional_id_prof" ColumnName="Profesional_id_prof" />
+          <ScalarProperty Name="Gerente_id_gerente" ColumnName="Gerente_id_gerente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accidente">
+      <EntityTypeMapping TypeName="BD_NMAModel.Accidente">
+        <MappingFragment StoreEntitySet="Accidente">
+          <ScalarProperty Name="Tipo_acc" ColumnName="Tipo_acc" />
+          <ScalarProperty Name="Descripcion_acc" ColumnName="Descripcion_acc" />
+          <ScalarProperty Name="Gravedad_acc" ColumnName="Gravedad_acc" />
+          <ScalarProperty Name="Alerta_id_alerta" ColumnName="Alerta_id_alerta" />
+          <ScalarProperty Name="Profesional_id_prof" ColumnName="Profesional_id_prof" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Act_de_mejora">
+      <EntityTypeMapping TypeName="BD_NMAModel.Act_de_mejora">
+        <MappingFragment StoreEntitySet="Act_de_mejora">
+          <ScalarProperty Name="Nombre_act_mejora" ColumnName="Nombre_act_mejora" />
+          <ScalarProperty Name="Descripcion_act_mejora" ColumnName="Descripcion_act_mejora" />
+          <ScalarProperty Name="Actividad_id_act" ColumnName="Actividad_id_act" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asesoria">
+      <EntityTypeMapping TypeName="BD_NMAModel.Asesoria">
+        <MappingFragment StoreEntitySet="Asesoria">
+          <ScalarProperty Name="Razon_ases" ColumnName="Razon_ases" />
+          <ScalarProperty Name="Estado_caso" ColumnName="Estado_caso" />
+          <ScalarProperty Name="Diligencia" ColumnName="Diligencia" />
+          <ScalarProperty Name="Evento_ases" ColumnName="Evento_ases" />
+          <ScalarProperty Name="Solicitud_id_solicitud" ColumnName="Solicitud_id_solicitud" />
+          <ScalarProperty Name="Actividad_id_act" ColumnName="Actividad_id_act" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Capacitacion">
+      <EntityTypeMapping TypeName="BD_NMAModel.Capacitacion">
+        <MappingFragment StoreEntitySet="Capacitacion">
+          <ScalarProperty Name="Nombre_cap" ColumnName="Nombre_cap" />
+          <ScalarProperty Name="Asistentes" ColumnName="Asistentes" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Actividad_id_act" ColumnName="Actividad_id_act" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visita">
+      <EntityTypeMapping TypeName="BD_NMAModel.Visita">
+        <MappingFragment StoreEntitySet="Visita">
+          <ScalarProperty Name="Actividad_id_act" ColumnName="Actividad_id_act" />
+          <ScalarProperty Name="Checklist_id_check" ColumnName="Checklist_id_check" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

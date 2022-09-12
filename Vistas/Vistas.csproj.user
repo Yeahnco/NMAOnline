@@ -7,21 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ClienteTarjetaCompleta.xaml.cs">
+    <Compile Update="Administrador.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="test.xaml.cs">
+    <Compile Update="TarjetaActividades.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ClienteTarjetaCompleta.xaml">
+    <Page Update="Administrador.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="test.xaml">
+    <Page Update="TarjetaActividades.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -617,6 +617,35 @@
             "rid": "win"
           }
         }
+      },
+      "Controladores/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "MahApps.Metro": "2.4.9",
+          "MahApps.Metro.IconPacks": "4.11.0",
+          "PersistenciaBD": "1.0.0",
+          "autosize": "3.0.8"
+        },
+        "compile": {
+          "bin/placeholder/Controladores.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Controladores.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "PersistenciaBD/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/PersistenciaBD.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersistenciaBD.dll": {}
+        }
       }
     }
   },
@@ -2301,35 +2330,42 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Controladores/1.0.0": {
+      "type": "project",
+      "path": "../Controladores/Controladores.csproj",
+      "msbuildProject": "../Controladores/Controladores.csproj"
+    },
+    "PersistenciaBD/1.0.0": {
+      "type": "project",
+      "path": "../PersistenciaBD/PersistenciaBD.csproj",
+      "msbuildProject": "../PersistenciaBD/PersistenciaBD.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "Controladores >= 1.0.0",
       "EntityFramework >= 6.4.4",
       "MahApps.Metro >= 2.4.9",
       "MahApps.Metro.IconPacks >= 4.11.0",
+      "PersistenciaBD >= 1.0.0",
       "autosize >= 3.0.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\diego\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jeaaa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\NMA_Project\\Vistas\\Vistas.csproj",
+      "projectUniqueName": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO BUENO\\NMA\\Vistas\\Vistas.csproj",
       "projectName": "Vistas",
-      "projectPath": "D:\\Projects\\NMA_Project\\Vistas\\Vistas.csproj",
-      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\NMA_Project\\Vistas\\obj\\",
+      "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO BUENO\\NMA\\Vistas\\Vistas.csproj",
+      "packagesPath": "C:\\Users\\jeaaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO BUENO\\NMA\\Vistas\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\jeaaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2337,13 +2373,19 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO BUENO\\NMA\\Controladores\\Controladores.csproj": {
+              "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO BUENO\\NMA\\Controladores\\Controladores.csproj"
+            },
+            "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO BUENO\\NMA\\PersistenciaBD\\PersistenciaBD.csproj": {
+              "projectPath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO BUENO\\NMA\\PersistenciaBD\\PersistenciaBD.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

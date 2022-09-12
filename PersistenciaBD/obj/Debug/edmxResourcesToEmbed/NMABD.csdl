@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_NMAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Actividad">
+    <Key>
+      <PropertyRef Name="id_act" />
+    </Key>
+    <Property Name="id_act" Type="Int32" Nullable="false" />
+    <Property Name="Fecha_act" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Hora_act" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Contador" Type="Int32" Nullable="false" />
+    <Property Name="Prof_id_profe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cliente_id_emp" Type="Int32" Nullable="false" />
+    <Property Name="Tipo_actividad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Act_de_mejora" Relationship="Self.FK_Act_de_mejora_Actividad" FromRole="Actividad" ToRole="Act_de_mejora" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Actividad_Cliente1" FromRole="Actividad" ToRole="Cliente" />
+    <NavigationProperty Name="Profesional" Relationship="Self.FK_Actividad_Profesional" FromRole="Actividad" ToRole="Profesional" />
+    <NavigationProperty Name="Asesoria" Relationship="Self.FK_Asesoria_Actividad" FromRole="Actividad" ToRole="Asesoria" />
+    <NavigationProperty Name="Capacitacion" Relationship="Self.FK_Capacitacion_Actividad" FromRole="Actividad" ToRole="Capacitacion" />
+    <NavigationProperty Name="Visita" Relationship="Self.FK_Visita_Actividad" FromRole="Actividad" ToRole="Visita" />
+  </EntityType>
+  <EntityType Name="Administrador">
+    <Key>
+      <PropertyRef Name="id_adm" />
+    </Key>
+    <Property Name="id_adm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre_adm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion_adm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Profesional" Relationship="Self.FK_Administrador_Profesional" FromRole="Administrador" ToRole="Profesional" />
+  </EntityType>
+  <EntityType Name="Alerta">
+    <Key>
+      <PropertyRef Name="id_alerta" />
+    </Key>
+    <Property Name="id_alerta" Type="Int32" Nullable="false" />
+    <Property Name="Motivo_alerta" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Registro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gerente_id_emp" Type="Int32" Nullable="false" />
+    <Property Name="Cliente_id_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Accidente" Relationship="Self.FK_Accidente_Alerta" FromRole="Alerta" ToRole="Accidente" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Alerta_Cliente" FromRole="Alerta" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Checklist">
+    <Key>
+      <PropertyRef Name="id_checklist" />
+    </Key>
+    <Property Name="id_checklist" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Aspectos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Resporte" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Visita_id_visi" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Visita" Relationship="Self.FK_Visita_Checklist" FromRole="Checklist" ToRole="Visita" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id_emp" />
+    </Key>
+    <Property Name="id_emp" Type="Int32" Nullable="false" />
+    <Property Name="Rut_emp" Type="Int32" Nullable="false" />
+    <Property Name="Dv_Rut_emp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre_emp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion_emp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividad_Cliente1" FromRole="Cliente" ToRole="Actividad" />
+    <NavigationProperty Name="Alerta" Relationship="Self.FK_Alerta_Cliente" FromRole="Cliente" ToRole="Alerta" />
+    <NavigationProperty Name="Profesional" Relationship="Self.FK_Cliente_Profesional" FromRole="Cliente" ToRole="Profesional" />
+    <NavigationProperty Name="Gerente" Relationship="Self.FK_Gerente_Cliente1" FromRole="Cliente" ToRole="Gerente" />
+  </EntityType>
+  <EntityType Name="Contrato">
+    <Key>
+      <PropertyRef Name="id_contrato" />
+    </Key>
+    <Property Name="id_contrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Vencimiento_cont" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Archivo_pdf" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="Gerente_id_gerente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Gerente" Relationship="Self.FK_Contrato_Gerente" FromRole="Contrato" ToRole="Gerente" />
+    <NavigationProperty Name="Plan" Relationship="Self.FK_Plan_Contrato" FromRole="Contrato" ToRole="Plan" />
+  </EntityType>
+  <EntityType Name="Gerente">
+    <Key>
+      <PropertyRef Name="id_gerente" />
+    </Key>
+    <Property Name="id_gerente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_gerente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fono_cliente" Type="Int32" />
+    <Property Name="Direccion_cliente" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail_cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contrato_id_contrato" Type="Int32" />
+    <Property Name="Cliente_id_clien" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Gerente_Cliente1" FromRole="Gerente" ToRole="Cliente" />
+    <NavigationProperty Name="Contrato" Relationship="Self.FK_Contrato_Gerente" FromRole="Gerente" ToRole="Contrato" />
+    <NavigationProperty Name="Solicitud" Relationship="Self.FK_Solicitud_Gerente" FromRole="Gerente" ToRole="Solicitud" />
+  </EntityType>
+  <EntityType Name="Pago">
+    <Key>
+      <PropertyRef Name="id_pago" />
+    </Key>
+    <Property Name="id_pago" Type="Int32" Nullable="false" />
+    <Property Name="Estado_pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mes_pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valor_extra" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total_a_pagar" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Comprobante" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="Plan_plan_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Plan" Relationship="Self.FK_Plan_Pago" FromRole="Pago" ToRole="Plan" />
+  </EntityType>
+  <EntityType Name="Plan">
+    <Key>
+      <PropertyRef Name="plan_id" />
+    </Key>
+    <Property Name="plan_id" Type="Int32" Nullable="false" />
+    <Property Name="Tipo_plan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valor_plan" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Pago_id_pago" Type="Int32" Nullable="false" />
+    <Property Name="Contrato_id_contrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Contrato" Relationship="Self.FK_Plan_Contrato" FromRole="Plan" ToRole="Contrato" />
+    <NavigationProperty Name="Pago" Relationship="Self.FK_Plan_Pago" FromRole="Plan" ToRole="Pago" />
+  </EntityType>
+  <EntityType Name="Profesional">
+    <Key>
+      <PropertyRef Name="id_prof" />
+    </Key>
+    <Property Name="id_prof" Type="Int32" Nullable="false" />
+    <Property Name="Rut_prof" Type="Int32" Nullable="false" />
+    <Property Name="Dv_rut_prof" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre_prof" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Rendimiento_prof" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado_prof" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha_nacimiento_prof" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Mail_prof" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividad_Profesional" FromRole="Profesional" ToRole="Actividad" />
+    <NavigationProperty Name="Administrador" Relationship="Self.FK_Administrador_Profesional" FromRole="Profesional" ToRole="Administrador" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Cliente_Profesional" FromRole="Profesional" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="id_solicitud" />
+    </Key>
+    <Property Name="id_solicitud" Type="Int32" Nullable="false" />
+    <Property Name="Razon_soli" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" />
+    <Property Name="Gerente_id_gerente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Gerente" Relationship="Self.FK_Solicitud_Gerente" FromRole="Solicitud" ToRole="Gerente" />
+  </EntityType>
+  <EntityType Name="Accidente">
+    <Key>
+      <PropertyRef Name="Tipo_acc" />
+      <PropertyRef Name="Descripcion_acc" />
+      <PropertyRef Name="Gravedad_acc" />
+      <PropertyRef Name="Alerta_id_alerta" />
+      <PropertyRef Name="Profesional_id_prof" />
+    </Key>
+    <Property Name="Tipo_acc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion_acc" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gravedad_acc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Alerta_id_alerta" Type="Int32" Nullable="false" />
+    <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Alerta" Relationship="Self.FK_Accidente_Alerta" FromRole="Accidente" ToRole="Alerta" />
+  </EntityType>
+  <EntityType Name="Act_de_mejora">
+    <Key>
+      <PropertyRef Name="Nombre_act_mejora" />
+      <PropertyRef Name="Descripcion_act_mejora" />
+      <PropertyRef Name="Actividad_id_act" />
+    </Key>
+    <Property Name="Nombre_act_mejora" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion_act_mejora" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Actividad_id_act" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Act_de_mejora_Actividad" FromRole="Act_de_mejora" ToRole="Actividad" />
+  </EntityType>
+  <EntityType Name="Asesoria">
+    <Key>
+      <PropertyRef Name="Razon_ases" />
+      <PropertyRef Name="Estado_caso" />
+      <PropertyRef Name="Diligencia" />
+      <PropertyRef Name="Evento_ases" />
+      <PropertyRef Name="Solicitud_id_solicitud" />
+      <PropertyRef Name="Actividad_id_act" />
+    </Key>
+    <Property Name="Razon_ases" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado_caso" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Diligencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Evento_ases" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Solicitud_id_solicitud" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Actividad_id_act" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Asesoria_Actividad" FromRole="Asesoria" ToRole="Actividad" />
+  </EntityType>
+  <EntityType Name="Capacitacion">
+    <Key>
+      <PropertyRef Name="Nombre_cap" />
+      <PropertyRef Name="Asistentes" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="Material" />
+      <PropertyRef Name="Actividad_id_act" />
+    </Key>
+    <Property Name="Nombre_cap" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Asistentes" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Material" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Actividad_id_act" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Capacitacion_Actividad" FromRole="Capacitacion" ToRole="Actividad" />
+  </EntityType>
+  <EntityType Name="Visita">
+    <Key>
+      <PropertyRef Name="Actividad_id_act" />
+    </Key>
+    <Property Name="Actividad_id_act" Type="Int32" Nullable="false" />
+    <Property Name="Checklist_id_check" Type="Int32" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Visita_Actividad" FromRole="Visita" ToRole="Actividad" />
+    <NavigationProperty Name="Checklist" Relationship="Self.FK_Visita_Checklist" FromRole="Visita" ToRole="Checklist" />
+  </EntityType>
+  <Association Name="FK_Act_de_mejora_Actividad">
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="1" />
+    <End Role="Act_de_mejora" Type="Self.Act_de_mejora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actividad">
+        <PropertyRef Name="id_act" />
+      </Principal>
+      <Dependent Role="Act_de_mejora">
+        <PropertyRef Name="Actividad_id_act" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Actividad_Cliente1">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_emp" />
+      </Principal>
+      <Dependent Role="Actividad">
+        <PropertyRef Name="Cliente_id_emp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Actividad_Profesional">
+    <End Role="Profesional" Type="Self.Profesional" Multiplicity="1" />
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesional">
+        <PropertyRef Name="id_prof" />
+      </Principal>
+      <Dependent Role="Actividad">
+        <PropertyRef Name="Prof_id_profe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asesoria_Actividad">
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="1" />
+    <End Role="Asesoria" Type="Self.Asesoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actividad">
+        <PropertyRef Name="id_act" />
+      </Principal>
+      <Dependent Role="Asesoria">
+        <PropertyRef Name="Actividad_id_act" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Capacitacion_Actividad">
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="1" />
+    <End Role="Capacitacion" Type="Self.Capacitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actividad">
+        <PropertyRef Name="id_act" />
+      </Principal>
+      <Dependent Role="Capacitacion">
+        <PropertyRef Name="Actividad_id_act" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Visita_Actividad">
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Actividad">
+        <PropertyRef Name="id_act" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="Actividad_id_act" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Administrador_Profesional">
+    <End Role="Profesional" Type="Self.Profesional" Multiplicity="1" />
+    <End Role="Administrador" Type="Self.Administrador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesional">
+        <PropertyRef Name="id_prof" />
+      </Principal>
+      <Dependent Role="Administrador">
+        <PropertyRef Name="Profesional_id_prof" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accidente_Alerta">
+    <End Role="Alerta" Type="Self.Alerta" Multiplicity="1" />
+    <End Role="Accidente" Type="Self.Accidente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alerta">
+        <PropertyRef Name="id_alerta" />
+      </Principal>
+      <Dependent Role="Accidente">
+        <PropertyRef Name="Alerta_id_alerta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alerta_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Alerta" Type="Self.Alerta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_emp" />
+      </Principal>
+      <Dependent Role="Alerta">
+        <PropertyRef Name="Cliente_id_emp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Visita_Checklist">
+    <End Role="Checklist" Type="Self.Checklist" Multiplicity="0..1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Checklist">
+        <PropertyRef Name="id_checklist" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="Checklist_id_check" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Profesional">
+    <End Role="Profesional" Type="Self.Profesional" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesional">
+        <PropertyRef Name="id_prof" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Profesional_id_prof" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gerente_Cliente1">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Gerente" Type="Self.Gerente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_emp" />
+      </Principal>
+      <Dependent Role="Gerente">
+        <PropertyRef Name="Cliente_id_clien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_Gerente">
+    <End Role="Gerente" Type="Self.Gerente" Multiplicity="1" />
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gerente">
+        <PropertyRef Name="id_gerente" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="Gerente_id_gerente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plan_Contrato">
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="1" />
+    <End Role="Plan" Type="Self.Plan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contrato">
+        <PropertyRef Name="id_contrato" />
+      </Principal>
+      <Dependent Role="Plan">
+        <PropertyRef Name="Contrato_id_contrato" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Gerente">
+    <End Role="Gerente" Type="Self.Gerente" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gerente">
+        <PropertyRef Name="id_gerente" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="Gerente_id_gerente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plan_Pago">
+    <End Role="Pago" Type="Self.Pago" Multiplicity="1" />
+    <End Role="Plan" Type="Self.Plan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pago">
+        <PropertyRef Name="id_pago" />
+      </Principal>
+      <Dependent Role="Plan">
+        <PropertyRef Name="Pago_id_pago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_NMAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Actividad" EntityType="Self.Actividad" />
+    <EntitySet Name="Administrador" EntityType="Self.Administrador" />
+    <EntitySet Name="Alerta" EntityType="Self.Alerta" />
+    <EntitySet Name="Checklist" EntityType="Self.Checklist" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="Contrato" EntityType="Self.Contrato" />
+    <EntitySet Name="Gerente" EntityType="Self.Gerente" />
+    <EntitySet Name="Pago" EntityType="Self.Pago" />
+    <EntitySet Name="Plan" EntityType="Self.Plan" />
+    <EntitySet Name="Profesional" EntityType="Self.Profesional" />
+    <EntitySet Name="Solicitud" EntityType="Self.Solicitud" />
+    <EntitySet Name="Accidente" EntityType="Self.Accidente" />
+    <EntitySet Name="Act_de_mejora" EntityType="Self.Act_de_mejora" />
+    <EntitySet Name="Asesoria" EntityType="Self.Asesoria" />
+    <EntitySet Name="Capacitacion" EntityType="Self.Capacitacion" />
+    <EntitySet Name="Visita" EntityType="Self.Visita" />
+    <AssociationSet Name="FK_Act_de_mejora_Actividad" Association="Self.FK_Act_de_mejora_Actividad">
+      <End Role="Actividad" EntitySet="Actividad" />
+      <End Role="Act_de_mejora" EntitySet="Act_de_mejora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Actividad_Cliente1" Association="Self.FK_Actividad_Cliente1">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Actividad" EntitySet="Actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Actividad_Profesional" Association="Self.FK_Actividad_Profesional">
+      <End Role="Profesional" EntitySet="Profesional" />
+      <End Role="Actividad" EntitySet="Actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asesoria_Actividad" Association="Self.FK_Asesoria_Actividad">
+      <End Role="Actividad" EntitySet="Actividad" />
+      <End Role="Asesoria" EntitySet="Asesoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Capacitacion_Actividad" Association="Self.FK_Capacitacion_Actividad">
+      <End Role="Actividad" EntitySet="Actividad" />
+      <End Role="Capacitacion" EntitySet="Capacitacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Visita_Actividad" Association="Self.FK_Visita_Actividad">
+      <End Role="Actividad" EntitySet="Actividad" />
+      <End Role="Visita" EntitySet="Visita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Administrador_Profesional" Association="Self.FK_Administrador_Profesional">
+      <End Role="Profesional" EntitySet="Profesional" />
+      <End Role="Administrador" EntitySet="Administrador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accidente_Alerta" Association="Self.FK_Accidente_Alerta">
+      <End Role="Alerta" EntitySet="Alerta" />
+      <End Role="Accidente" EntitySet="Accidente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alerta_Cliente" Association="Self.FK_Alerta_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Alerta" EntitySet="Alerta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Visita_Checklist" Association="Self.FK_Visita_Checklist">
+      <End Role="Checklist" EntitySet="Checklist" />
+      <End Role="Visita" EntitySet="Visita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Profesional" Association="Self.FK_Cliente_Profesional">
+      <End Role="Profesional" EntitySet="Profesional" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gerente_Cliente1" Association="Self.FK_Gerente_Cliente1">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Gerente" EntitySet="Gerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_Gerente" Association="Self.FK_Contrato_Gerente">
+      <End Role="Gerente" EntitySet="Gerente" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plan_Contrato" Association="Self.FK_Plan_Contrato">
+      <End Role="Contrato" EntitySet="Contrato" />
+      <End Role="Plan" EntitySet="Plan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Gerente" Association="Self.FK_Solicitud_Gerente">
+      <End Role="Gerente" EntitySet="Gerente" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plan_Pago" Association="Self.FK_Plan_Pago">
+      <End Role="Pago" EntitySet="Pago" />
+      <End Role="Plan" EntitySet="Plan" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
