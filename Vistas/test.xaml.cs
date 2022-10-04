@@ -14,6 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Converters;
 using System.Security.Cryptography.X509Certificates;
+using PersistenciaBD;
+using Controladores;
+using System.Data.Entity.Core.Mapping;
 
 namespace Vistas
 {
@@ -22,6 +25,9 @@ namespace Vistas
     /// </summary>
     public partial class test : MetroWindow
     {
+        ServiceCliente sc = new ServiceCliente();
+        ServiceProfesional sp = new ServiceProfesional();
+        ServiceGerente sg = new ServiceGerente();
         public test()
         {
             InitializeComponent();
@@ -73,6 +79,8 @@ namespace Vistas
         }
         */
         ////////////TESTEO DE DYNAMICTABITEM////////////////////////////////
+
+
         private void tabItemClientes_GotFocus(object sender, RoutedEventArgs e)
         {
             tbItemOpciones1.Header = "CLIENTE";
@@ -82,7 +90,7 @@ namespace Vistas
             tbItemOpciones2.Visibility = Visibility.Visible;
             tbItemOpciones3.Visibility = Visibility.Visible;
         }
-        private void TabitemProfesionales_GotFocus(object sender, RoutedEventArgs e)
+        private void tbItemProfesionales_GotFocus(object sender, RoutedEventArgs e)
         {
             tbItemOpciones1.Header = "REVISIÓN";
             tbItemOpciones1.Visibility = Visibility.Visible;
@@ -90,7 +98,7 @@ namespace Vistas
             tbItemOpciones3.Visibility = Visibility.Collapsed;
 
         }
-       
+
         private void tileSalir_Click(object sender, RoutedEventArgs e)
         {
             MainWindow login = new MainWindow();
@@ -100,14 +108,69 @@ namespace Vistas
 
         private void tbItemOpciones1_GotFocus(object sender, RoutedEventArgs e)
         {
-            if(tbItemOpciones1.Header.Equals("CLIENTE"))
+            if (tbItemOpciones1.Header.Equals("CLIENTE"))
             {
-                scrlViewerOpcion1Cliente.Visibility = Visibility.Visible;   
+                scrlViewerOpcion1Cliente.Visibility = Visibility.Visible;
             }
             else
             {
                 scrlViewerOpcion1Cliente.Visibility = Visibility.Collapsed;
             }
         }
+        public ClienteTarjetaCompleta CrearTarjeta(int idc, int idg, int idp)
+        {
+            var rut = sc.GetEntity(idc).Rut_emp.ToString() + '-' + sc.GetEntity(idc).Dv_Rut_emp;
+            ClienteTarjetaCompleta clienteTarjetaCompleta = new ClienteTarjetaCompleta();
+            clienteTarjetaCompleta.displayEmpresa = sc.GetEntity(idc).Nombre_emp;
+            clienteTarjetaCompleta.displayRutEmpresa = rut;
+            clienteTarjetaCompleta.displayGerente = sg.GetEntity(idg).Nombre_gerente;
+            clienteTarjetaCompleta.displayProfNombre = sp.GetEntity(idp).Nombre_prof;
+            clienteTarjetaCompleta.displayMailGerente = sg.GetEntity(idg).Mail_cliente;
+            clienteTarjetaCompleta.displayTelefonoEmpresa = sg.GetEntity(idg).Fono_cliente.ToString();
+            clienteTarjetaCompleta.displayDireccion = sc.GetEntity(idc).Direccion_emp;
+
+            return clienteTarjetaCompleta;
+        }
+
+        public void MostrarClientes()
+        {
+            List<Cliente> cliente = new List<Cliente>();
+            List<Profesional> profesional = new List<Profesional>();
+            List<Gerente> gerente = new List<Gerente>();
+            foreach (Profesional p in sp.GetEntities())
+                foreach (Gerente g in sg.GetEntities())
+                    foreach (Cliente c in sc.GetEntities())
+                    {
+                        profesional.Add(sp.GetEntity(1));
+                        gerente.Add(sg.GetEntity(1));
+                        cliente.Add(sc.GetEntity(1));
+                        stckPanelTarjetasCliente.Children.Add(CrearTarjeta(c.id_emp, g.id_gerente, p.id_prof));
+                    }
+        }
+        /*
+        public void ListaCliente()
+        {
+            ClienteTarjetaCompleta clienteTarjeta = new ClienteTarjetaCompleta();
+            List<Cliente> cliente = new List<Cliente>();
+            List<Gerente> gerente = new List<Gerente>();
+            List<Profesional> profesional = new List<Profesional>();
+            foreach (Cliente c in sc.GetEntities())
+            {
+                clienteTarjeta.displayEmpresa = c.Nombre_emp.ToString();
+                clienteTarjeta.displayRutEmpresa = c.Rut_emp.ToString()+'-'+c.Dv_Rut_emp;
+            }
+        }
+        */
+
+        private void stckPanelTarjetasCliente_Initialized(object sender, EventArgs e)
+        {
+            MostrarClientes();
+        }
+
+        private void TabitemProfesionales_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
+

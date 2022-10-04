@@ -23,7 +23,7 @@ namespace PersistenciaBD
         }
     
         public int id_prof { get; set; }
-        public int Rut_prof { get; set; }
+        public string Rut_prof { get; set; }
         public string Dv_rut_prof { get; set; }
         public string Nombre_prof { get; set; }
         public int Rendimiento_prof { get; set; }

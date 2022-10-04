@@ -23,7 +23,7 @@ namespace PersistenciaBD
         }
     
         public int id_emp { get; set; }
-        public int Rut_emp { get; set; }
+        public string Rut_emp { get; set; }
         public string Dv_Rut_emp { get; set; }
         public string Nombre_emp { get; set; }
         public string Direccion_emp { get; set; }

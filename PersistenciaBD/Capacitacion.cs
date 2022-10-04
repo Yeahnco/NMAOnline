@@ -19,6 +19,7 @@ namespace PersistenciaBD
         public string Descripcion { get; set; }
         public string Material { get; set; }
         public int Actividad_id_act { get; set; }
+        public string Estado { get; set; }
     
         public virtual Actividad Actividad { get; set; }
     }

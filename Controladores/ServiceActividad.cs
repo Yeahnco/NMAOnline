@@ -11,7 +11,7 @@ namespace Controladores
     {
         public override List<Actividad> GetEntities()
         {
-            return nmaEn.Actividad.ToList<Actividad>();
+            return nmaEn.Actividad.OrderBy(Actividad => Actividad.Hora_act).ToList<Actividad>();
         }
 
         public override Actividad GetEntity(object key)

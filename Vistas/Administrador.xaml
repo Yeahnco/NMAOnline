@@ -74,11 +74,11 @@
 
                                     <ScrollViewer Height="357" VerticalAlignment="Top" HorizontalAlignment="Left" Width="847" Margin="-28,23,0,0">
 
-                                        <StackPanel x:Name="stackActHoy" Initialized="stackActHoy_Initialized">
-                 
-                                                
+                                        <StackPanel x:Name="stackActHoy" Initialized="stackActHoy_Initialized" >
 
-                           
+
+
+
 
                                         </StackPanel>
                                     </ScrollViewer>
@@ -156,7 +156,7 @@
 
                         <Grid Margin="10,10,0,0">
 
-                            <TabControl x:Name="TabControlAct1" FontSize="12" mah:HeaderedControlHelper.HeaderFontSize="20" Margin="0,10,0,-85" FontWeight="SemiBold">
+                            <TabControl x:Name="TabControlClien" FontSize="12" mah:HeaderedControlHelper.HeaderFontSize="20" Margin="0,10,0,-85" FontWeight="SemiBold">
 
                                 <TabControl.Background>
                                     <SolidColorBrush Color="White" Opacity="0"/>
@@ -174,27 +174,17 @@
                                         </LinearGradientBrush>
                                     </mah:TabControlHelper.UnderlineMouseOverBrush>
 
-                                    <Grid Margin="-4,0,38,48" Height="399" >
-                                        <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,1,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-                                        <Image Margin="-15,87,-17,258" Source="/pngegg.png" Stretch="Fill">
-                                            <Image.OpacityMask>
-                                                <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                            </Image.OpacityMask>
-                                        </Image>
-                                        <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-                                        <Image Margin="-16,201,-16,144" Source="/pngegg.png" Stretch="Fill">
-                                            <Image.OpacityMask>
-                                                <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                            </Image.OpacityMask>
-                                        </Image>
-                                        <Image Margin="-16,319,-16,26" Source="/pngegg.png" Stretch="Fill">
-                                            <Image.OpacityMask>
-                                                <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                            </Image.OpacityMask>
-                                        </Image>
-                                        <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,233,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
 
-                                    </Grid>
+                                    <ScrollViewer Height="357" VerticalAlignment="Top" HorizontalAlignment="Left" Width="829" Margin="-10,23,0,0">
+
+                                        <StackPanel x:Name="stackCliAdm" Initialized="stackCliAdm_Initialized"  >
+
+
+
+
+
+                                        </StackPanel>
+                                    </ScrollViewer>
 
 
                                 </TabItem>
@@ -303,7 +293,7 @@
 
         <Rectangle HorizontalAlignment="Left" Height="365" Margin="143,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="1" Opacity="0.085"/>
         <Image Margin="-187,42,-143,406" Source="/Recursos/pngegg.png" Stretch="Fill" Opacity="0.7"/>
-        <TextBox HorizontalAlignment="Left" Margin="870,66,0,0" TextWrapping="Wrap" mah:TextBoxHelper.Watermark="Buscar" VerticalAlignment="Top" Width="120" Height="26">
+        <TextBox x:Name="txbBuscAct" HorizontalAlignment="Left" Margin="870,66,0,0" TextWrapping="Wrap" mah:TextBoxHelper.Watermark="Buscar" VerticalAlignment="Top" Width="120" Height="26" TextChanged="txbBuscAct_TextChanged">
             <TextBox.Background>
                 <ImageBrush ImageSource="/Recursos/Iconos/GRIS/icons8-search-50.png" Stretch="Uniform" Opacity="0.75">
                     <ImageBrush.RelativeTransform>

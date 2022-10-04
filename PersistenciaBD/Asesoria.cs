@@ -20,6 +20,7 @@ namespace PersistenciaBD
         public string Evento_ases { get; set; }
         public int Solicitud_id_solicitud { get; set; }
         public int Actividad_id_act { get; set; }
+        public string Estado { get; set; }
     
         public virtual Actividad Actividad { get; set; }
     }

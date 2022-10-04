@@ -4,13 +4,14 @@
     <Key>
       <PropertyRef Name="id_act" />
     </Key>
-    <Property Name="id_act" Type="Int32" Nullable="false" />
+    <Property Name="id_act" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Fecha_act" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Hora_act" Type="Time" Nullable="false" Precision="7" />
     <Property Name="Contador" Type="Int32" Nullable="false" />
-    <Property Name="Prof_id_profe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Prof_id_profe" Type="Int32" Nullable="false" />
     <Property Name="Cliente_id_emp" Type="Int32" Nullable="false" />
     <Property Name="Tipo_actividad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Act_de_mejora" Relationship="Self.FK_Act_de_mejora_Actividad" FromRole="Actividad" ToRole="Act_de_mejora" />
     <NavigationProperty Name="Cliente" Relationship="Self.FK_Actividad_Cliente1" FromRole="Actividad" ToRole="Cliente" />
     <NavigationProperty Name="Profesional" Relationship="Self.FK_Actividad_Profesional" FromRole="Actividad" ToRole="Profesional" />
@@ -22,21 +23,20 @@
     <Key>
       <PropertyRef Name="id_adm" />
     </Key>
-    <Property Name="id_adm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_adm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre_adm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Direccion_adm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Profesional" Relationship="Self.FK_Administrador_Profesional" FromRole="Administrador" ToRole="Profesional" />
   </EntityType>
   <EntityType Name="Alerta">
     <Key>
       <PropertyRef Name="id_alerta" />
     </Key>
-    <Property Name="id_alerta" Type="Int32" Nullable="false" />
+    <Property Name="id_alerta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Motivo_alerta" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Registro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Gerente_id_emp" Type="Int32" Nullable="false" />
-    <Property Name="Cliente_id_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cliente_id_emp" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Accidente" Relationship="Self.FK_Accidente_Alerta" FromRole="Alerta" ToRole="Accidente" />
     <NavigationProperty Name="Cliente" Relationship="Self.FK_Alerta_Cliente" FromRole="Alerta" ToRole="Cliente" />
   </EntityType>
@@ -46,7 +46,7 @@
     </Key>
     <Property Name="id_checklist" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Aspectos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Resporte" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Reporte" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Visita_id_visi" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Visita" Relationship="Self.FK_Visita_Checklist" FromRole="Checklist" ToRole="Visita" />
   </EntityType>
@@ -54,12 +54,12 @@
     <Key>
       <PropertyRef Name="id_emp" />
     </Key>
-    <Property Name="id_emp" Type="Int32" Nullable="false" />
-    <Property Name="Rut_emp" Type="Int32" Nullable="false" />
+    <Property Name="id_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rut_emp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Dv_Rut_emp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Nombre_emp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Direccion_emp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividad_Cliente1" FromRole="Cliente" ToRole="Actividad" />
     <NavigationProperty Name="Alerta" Relationship="Self.FK_Alerta_Cliente" FromRole="Cliente" ToRole="Alerta" />
     <NavigationProperty Name="Profesional" Relationship="Self.FK_Cliente_Profesional" FromRole="Cliente" ToRole="Profesional" />
@@ -95,24 +95,24 @@
     <Key>
       <PropertyRef Name="id_pago" />
     </Key>
-    <Property Name="id_pago" Type="Int32" Nullable="false" />
+    <Property Name="id_pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Estado_pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Mes_pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Valor_extra" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Total_a_pagar" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Comprobante" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
-    <Property Name="Plan_plan_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Plan_plan_id" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Plan" Relationship="Self.FK_Plan_Pago" FromRole="Pago" ToRole="Plan" />
   </EntityType>
   <EntityType Name="Plan">
     <Key>
       <PropertyRef Name="plan_id" />
     </Key>
-    <Property Name="plan_id" Type="Int32" Nullable="false" />
+    <Property Name="plan_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Tipo_plan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Valor_plan" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="Pago_id_pago" Type="Int32" Nullable="false" />
-    <Property Name="Contrato_id_contrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Contrato_id_contrato" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Contrato" Relationship="Self.FK_Plan_Contrato" FromRole="Plan" ToRole="Contrato" />
     <NavigationProperty Name="Pago" Relationship="Self.FK_Plan_Pago" FromRole="Plan" ToRole="Pago" />
   </EntityType>
@@ -120,11 +120,11 @@
     <Key>
       <PropertyRef Name="id_prof" />
     </Key>
-    <Property Name="id_prof" Type="Int32" Nullable="false" />
-    <Property Name="Rut_prof" Type="Int32" Nullable="false" />
+    <Property Name="id_prof" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rut_prof" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Dv_rut_prof" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Nombre_prof" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Rendimiento_prof" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rendimiento_prof" Type="Int32" Nullable="false" />
     <Property Name="Estado_prof" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Fecha_nacimiento_prof" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Mail_prof" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -136,11 +136,21 @@
     <Key>
       <PropertyRef Name="id_solicitud" />
     </Key>
-    <Property Name="id_solicitud" Type="Int32" Nullable="false" />
+    <Property Name="id_solicitud" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Razon_soli" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Profesional_id_prof" Type="Int32" Nullable="false" />
     <Property Name="Gerente_id_gerente" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Gerente" Relationship="Self.FK_Solicitud_Gerente" FromRole="Solicitud" ToRole="Gerente" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Accidente">
     <Key>
@@ -166,6 +176,7 @@
     <Property Name="Nombre_act_mejora" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Descripcion_act_mejora" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Actividad_id_act" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Actividad" Relationship="Self.FK_Act_de_mejora_Actividad" FromRole="Act_de_mejora" ToRole="Actividad" />
   </EntityType>
   <EntityType Name="Asesoria">
@@ -176,13 +187,15 @@
       <PropertyRef Name="Evento_ases" />
       <PropertyRef Name="Solicitud_id_solicitud" />
       <PropertyRef Name="Actividad_id_act" />
+      <PropertyRef Name="Estado" />
     </Key>
     <Property Name="Razon_ases" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Estado_caso" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Diligencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Evento_ases" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Solicitud_id_solicitud" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Solicitud_id_solicitud" Type="Int32" Nullable="false" />
     <Property Name="Actividad_id_act" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Actividad" Relationship="Self.FK_Asesoria_Actividad" FromRole="Asesoria" ToRole="Actividad" />
   </EntityType>
   <EntityType Name="Capacitacion">
@@ -192,20 +205,34 @@
       <PropertyRef Name="Descripcion" />
       <PropertyRef Name="Material" />
       <PropertyRef Name="Actividad_id_act" />
+      <PropertyRef Name="Estado" />
     </Key>
     <Property Name="Nombre_cap" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Asistentes" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Material" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Actividad_id_act" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Actividad_id_act" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Actividad" Relationship="Self.FK_Capacitacion_Actividad" FromRole="Capacitacion" ToRole="Actividad" />
+  </EntityType>
+  <EntityType Name="ERROR_LOG">
+    <Key>
+      <PropertyRef Name="ERROR_LOG_ID" />
+    </Key>
+    <Property Name="ERROR_LOG_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ERROR_NUMBER" Type="Int32" />
+    <Property Name="ERROR_LINE" Type="Int32" />
+    <Property Name="ERROR_MESSAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OBJECT_NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Visita">
     <Key>
       <PropertyRef Name="Actividad_id_act" />
+      <PropertyRef Name="Estado" />
     </Key>
     <Property Name="Actividad_id_act" Type="Int32" Nullable="false" />
     <Property Name="Checklist_id_check" Type="Int32" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Actividad" Relationship="Self.FK_Visita_Actividad" FromRole="Visita" ToRole="Actividad" />
     <NavigationProperty Name="Checklist" Relationship="Self.FK_Visita_Checklist" FromRole="Visita" ToRole="Checklist" />
   </EntityType>
@@ -271,7 +298,7 @@
   </Association>
   <Association Name="FK_Visita_Actividad">
     <End Role="Actividad" Type="Self.Actividad" Multiplicity="1" />
-    <End Role="Visita" Type="Self.Visita" Multiplicity="0..1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Actividad">
         <PropertyRef Name="id_act" />
@@ -413,10 +440,12 @@
     <EntitySet Name="Plan" EntityType="Self.Plan" />
     <EntitySet Name="Profesional" EntityType="Self.Profesional" />
     <EntitySet Name="Solicitud" EntityType="Self.Solicitud" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Accidente" EntityType="Self.Accidente" />
     <EntitySet Name="Act_de_mejora" EntityType="Self.Act_de_mejora" />
     <EntitySet Name="Asesoria" EntityType="Self.Asesoria" />
     <EntitySet Name="Capacitacion" EntityType="Self.Capacitacion" />
+    <EntitySet Name="ERROR_LOG" EntityType="Self.ERROR_LOG" />
     <EntitySet Name="Visita" EntityType="Self.Visita" />
     <AssociationSet Name="FK_Act_de_mejora_Actividad" Association="Self.FK_Act_de_mejora_Actividad">
       <End Role="Actividad" EntitySet="Actividad" />
@@ -482,5 +511,46 @@
       <End Role="Pago" EntitySet="Pago" />
       <End Role="Plan" EntitySet="Plan" />
     </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BD_NMAModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BD_NMAModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>

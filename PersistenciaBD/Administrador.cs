@@ -14,9 +14,8 @@ namespace PersistenciaBD
     
     public partial class Administrador
     {
-        public string id_adm { get; set; }
+        public int id_adm { get; set; }
         public string Nombre_adm { get; set; }
-        public string Direccion_adm { get; set; }
         public int Profesional_id_prof { get; set; }
     
         public virtual Profesional Profesional { get; set; }

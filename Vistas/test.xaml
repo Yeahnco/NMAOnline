@@ -89,8 +89,7 @@
                              Grid.IsSharedSizeScope="True" 
                              Padding="26,15,0,0" 
                              RenderTransformOrigin="0.5,0.5" 
-                             Margin="10,26,0,371" 
-                             GotFocus="TabitemProfesionales_GotFocus">
+                             Margin="10,26,0,371">
                         <TabItem.Background>
                             <ImageBrush Stretch="Uniform" 
                                         ImageSource="/Recursos/Iconos/PURPURA/icons8-administrator-male-50.png">
