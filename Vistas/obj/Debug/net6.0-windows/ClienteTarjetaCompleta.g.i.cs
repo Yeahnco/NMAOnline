@@ -208,7 +208,7 @@ namespace Vistas {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Vistas;component/clientetarjetacompleta.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Vistas;V1.0.0.0;component/clientetarjetacompleta.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ClienteTarjetaCompleta.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

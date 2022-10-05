@@ -40,7 +40,7 @@ namespace Vistas
             InitializeComponent();
         }
 
-        //////////////////////// METODOS CREADOS //////////////////////////
+        //////////////////////////////////////////////// METODOS CREADOS //////////////////////////////////////////////////////////////
 
         public TarjetaActividades CrearTarjetaActividades(int idAct, int idCli, int idProf)
         {
@@ -207,11 +207,13 @@ namespace Vistas
                 await this.ShowMessageAsync("ERROR: ", "Se ha producido un error al filtrar. \n" + ex.Message);
             }
         }
-
+        // ------------------------------------------------ ADM CLIENTE ------------------------------------------------------ //
         public ClienteTarjetaCompleta CrearTarjeta(int idc, int idg, int idp)
         {
-            var rut = sc.GetEntity(idc).Rut_emp.ToString() + '-' + sc.GetEntity(idc).Dv_Rut_emp;
             ClienteTarjetaCompleta clienteTarjetaCompleta = new ClienteTarjetaCompleta();
+
+            var rut = sc.GetEntity(idc).Rut_emp.ToString() + '-' + sc.GetEntity(idc).Dv_Rut_emp;
+
             clienteTarjetaCompleta.displayEmpresa = sc.GetEntity(idc).Nombre_emp;
             clienteTarjetaCompleta.displayRutEmpresa = rut;
             clienteTarjetaCompleta.displayGerente = sg.GetEntity(idg).Nombre_gerente;
@@ -229,12 +231,41 @@ namespace Vistas
             List<Cliente> cliente = new List<Cliente>();
             foreach (Cliente c in sc.GetEntities())
             {
-
+                if(c.id_emp == c.id_emp)
+                {
                     stackCliAdm.Children.Add(CrearTarjeta(c.id_emp, sg.GetEntity(c.id_emp).id_gerente, c.Profesional_id_prof));
-
+                }        
             }
         }
-        //////////////////////// METODOS CREADOS //////////////////////////
+
+        private async void FiltrarStackClientes()
+        {
+            try
+            {
+                string filtro = txbBuscAct.Text.ToLower();
+                stackCliAdm.Children.Clear();
+
+                foreach (Cliente c in sc.GetEntities())
+                {
+
+                    if (c.Nombre_emp.ToLower().Contains(filtro) | sp.GetEntity(c.Profesional_id_prof).Nombre_prof.ToLower().Contains(filtro) | sg.GetEntity(c.id_emp).Nombre_gerente.ToLower().Contains(filtro))
+                    {
+
+                        stackCliAdm.Children.Add(CrearTarjeta(c.id_emp, sg.GetEntity(c.id_emp).id_gerente, c.Profesional_id_prof));
+
+                    }
+
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                await this.ShowMessageAsync("ERROR: ", "Se ha producido un error al filtrar. \n" + ex.Message);
+            }
+        }
+
+        //////////////////////////////////////////////// METODOS CREADOS //////////////////////////////////////////////////////////////
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -269,6 +300,8 @@ namespace Vistas
             FiltrarStackActHoy();
             FiltrarStackActSemana();
             FiltrarStackActCerradas();
+
+            FiltrarStackClientes();
         }
     }
 }
