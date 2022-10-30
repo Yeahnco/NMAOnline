@@ -16,7 +16,6 @@ namespace PersistenciaBD
     {
         public int Actividad_id_act { get; set; }
         public Nullable<int> Checklist_id_check { get; set; }
-        public string Estado { get; set; }
     
         public virtual Actividad Actividad { get; set; }
         public virtual Checklist Checklist { get; set; }

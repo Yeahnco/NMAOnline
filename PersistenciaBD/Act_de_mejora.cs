@@ -17,7 +17,6 @@ namespace PersistenciaBD
         public string Nombre_act_mejora { get; set; }
         public string Descripcion_act_mejora { get; set; }
         public int Actividad_id_act { get; set; }
-        public string Estado { get; set; }
     
         public virtual Actividad Actividad { get; set; }
     }

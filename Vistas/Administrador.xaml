@@ -1,4 +1,4 @@
-﻿<mah:MetroWindow x:Class="Vistas.Administrador"
+﻿<mah:MetroWindow x:Name="Vadmin" x:Class="Vistas.Administrador"
         ResizeMode="NoResize"
         ShowCloseButton="False"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
@@ -10,7 +10,7 @@
         xmlns:local="clr-namespace:Vistas"
         mc:Ignorable="d"
         
-        Title="Administrador" Height="500" Width="1000">
+        Title="Administrador" Height="500" Width="1000" Closed="Vadmin_Closed">
     <Grid>
 
 
@@ -177,7 +177,26 @@
 
                                     <ScrollViewer Height="357" VerticalAlignment="Top" HorizontalAlignment="Left" Width="829" Margin="-10,23,0,0">
 
-                                        <StackPanel x:Name="stackCliAdm" Initialized="stackCliAdm_Initialized"  >
+                                        <StackPanel x:Name="stackCliAdm" Initialized="stackCliAdm_Initialized" KeyUp="stackCliAdm_KeyUp"  />
+                                    </ScrollViewer>
+
+
+                                </TabItem>
+
+                                <TabItem x:Name="TabitemPagosCli" Header="Pagos" mah:HeaderedControlHelper.HeaderFontSize="15" mah:HeaderedControlHelper.HeaderFontWeight="SemiBold" Margin="0,0,-38,0">
+                                    <TabItem.Background>
+                                        <SolidColorBrush Color="White" Opacity="0"/>
+                                    </TabItem.Background>
+                                    <mah:TabControlHelper.UnderlineMouseOverBrush>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="Black"/>
+                                            <GradientStop Color="#FF4E16D1" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </mah:TabControlHelper.UnderlineMouseOverBrush>
+
+                                    <ScrollViewer Height="357" VerticalAlignment="Top" HorizontalAlignment="Left" Width="829" Margin="-10,23,0,0">
+
+                                        <StackPanel x:Name="stackPagos" Initialized="stackPagos_Initialized" MouseLeftButtonUp="stackPagos_MouseLeftButtonUp" >
 
 
 
@@ -185,37 +204,6 @@
 
                                         </StackPanel>
                                     </ScrollViewer>
-
-
-                                </TabItem>
-
-                                <TabItem x:Name="TabitemPagosCli" Header="Pagos" mah:HeaderedControlHelper.HeaderFontSize="15" mah:HeaderedControlHelper.HeaderFontWeight="SemiBold" Margin="0,0,-38,0">
-                                    <Grid>
-                                        <Grid.Background>
-                                            <SolidColorBrush Color="White" Opacity="0"/>
-                                        </Grid.Background>
-                                        <Grid Margin="-4,13,38,61" >
-                                            <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,1,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-                                            <Image Margin="-15,87,-17,258" Source="/pngegg.png" Stretch="Fill">
-                                                <Image.OpacityMask>
-                                                    <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                                </Image.OpacityMask>
-                                            </Image>
-                                            <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-                                            <Image Margin="-16,201,-16,144" Source="/pngegg.png" Stretch="Fill">
-                                                <Image.OpacityMask>
-                                                    <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                                </Image.OpacityMask>
-                                            </Image>
-                                            <Image Margin="-16,319,-16,26" Source="/pngegg.png" Stretch="Fill">
-                                                <Image.OpacityMask>
-                                                    <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                                </Image.OpacityMask>
-                                            </Image>
-                                            <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,233,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-
-                                        </Grid>
-                                    </Grid>
                                 </TabItem>
 
                             </TabControl>
@@ -239,7 +227,7 @@
 
                         <Grid Margin="10,10,0,0">
 
-                            <TabControl x:Name="TabControlAct2" FontSize="12" mah:HeaderedControlHelper.HeaderFontSize="20" Margin="0,10,0,-85" FontWeight="SemiBold">
+                            <TabControl x:Name="TabControlAct2" FontSize="12" mah:HeaderedControlHelper.HeaderFontSize="20" Margin="0,10,0,-85" FontWeight="SemiBold" KeyUp="TabControlAct2_KeyUp">
 
                                 <TabControl.Background>
                                     <SolidColorBrush Color="White" Opacity="0"/>
@@ -256,27 +244,11 @@
                                             <GradientStop Color="#FF4E16D1" Offset="1"/>
                                         </LinearGradientBrush>
                                     </mah:TabControlHelper.UnderlineMouseOverBrush>
-                                    <Grid Margin="-4,0,38,48" Height="399" >
-                                        <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,1,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-                                        <Image Margin="-15,87,-17,258" Source="/pngegg.png" Stretch="Fill">
-                                            <Image.OpacityMask>
-                                                <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                            </Image.OpacityMask>
-                                        </Image>
-                                        <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
-                                        <Image Margin="-16,201,-16,144" Source="/pngegg.png" Stretch="Fill">
-                                            <Image.OpacityMask>
-                                                <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                            </Image.OpacityMask>
-                                        </Image>
-                                        <Image Margin="-16,319,-16,26" Source="/pngegg.png" Stretch="Fill">
-                                            <Image.OpacityMask>
-                                                <SolidColorBrush Color="Black" Opacity="0.6"/>
-                                            </Image.OpacityMask>
-                                        </Image>
-                                        <Rectangle HorizontalAlignment="Center" Height="100" Margin="0,233,0,0" Stroke="Black" VerticalAlignment="Top" Width="766" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}"/>
+                                    
+                                    <ScrollViewer Height="357" VerticalAlignment="Top" HorizontalAlignment="Left" Width="829" Margin="-10,23,0,0">
 
-                                    </Grid>
+                                        <StackPanel x:Name="stackProf" Initialized="stackProf_Initialized"   />
+                                    </ScrollViewer>
 
 
                                 </TabItem>

@@ -16,7 +16,7 @@ namespace Controladores
 
         public override Gerente GetEntity(object key)
         {
-            return nmaEn.Gerente.Where(gerente => gerente.Cliente_id_clien == (int)key).FirstOrDefault<Gerente>();
+            return nmaEn.Gerente.Where(gerente => gerente.id_gerente == (int)key).FirstOrDefault<Gerente>();
         }
     }
 }

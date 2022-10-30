@@ -119,7 +119,7 @@ namespace Vistas
         }
         public ClienteTarjetaCompleta CrearTarjeta(int idc, int idg, int idp)
         {
-            var rut = sc.GetEntity(idc).Rut_emp.ToString() + '-' + sc.GetEntity(idc).Dv_Rut_emp;
+            var rut = sc.GetEntity(idc).Rut_emp.ToString();
             ClienteTarjetaCompleta clienteTarjetaCompleta = new ClienteTarjetaCompleta();
             clienteTarjetaCompleta.displayEmpresa = sc.GetEntity(idc).Nombre_emp;
             clienteTarjetaCompleta.displayRutEmpresa = rut;

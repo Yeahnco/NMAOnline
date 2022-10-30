@@ -14,13 +14,19 @@ namespace PersistenciaBD
     
     public partial class Plan
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Plan()
+        {
+            this.Pago = new HashSet<Pago>();
+        }
+    
         public int plan_id { get; set; }
         public string Tipo_plan { get; set; }
         public decimal Valor_plan { get; set; }
-        public int Pago_id_pago { get; set; }
         public int Contrato_id_contrato { get; set; }
     
         public virtual Contrato Contrato { get; set; }
-        public virtual Pago Pago { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pago> Pago { get; set; }
     }
 }

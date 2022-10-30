@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ob4nsXMDNVVZ7ccYiro1X7dV5u3cmM+MnOigQ52NivSONxTtq/S8rjek9t0L4ArMCfySZHvP2FcbS2VuD8ygPg==",
+  "dgSpecHash": "tJ5cdX8ZNj+d0PbbNvL3tsgw/aMyUXZ9AZEcPA7BVbYTfdw02T7kp9WRYGOwJgLqJVW3x+zeqxwks0ETjXjTmw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jeaaa\\Documents\\PROYECTO DE TITULO BUENO\\NMA\\Vistas\\Vistas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jeaaa\\.nuget\\packages\\autosize\\3.0.8\\autosize.3.0.8.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\jeaaa\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -14,6 +15,7 @@
     "C:\\Users\\jeaaa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\jeaaa\\.nuget\\packages\\propertychanged.fody\\4.0.5\\propertychanged.fody.4.0.5.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\jeaaa\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

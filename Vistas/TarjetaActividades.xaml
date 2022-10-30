@@ -14,16 +14,55 @@
             </Image.OpacityMask>
         </Image>
 
-        <Label x:Name="Empresa1" Content="{Binding nombreEmp, TargetNullValue=''}" FontSize="26" Margin="-26,-4,649,0" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="56" VerticalAlignment="Top"/>
-        <Label x:Name="fechaActividad" Content="{Binding fechaAct, TargetNullValue=''}" Margin="39,42,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" FontSize="12"/>
-        <Label x:Name="lblGerente" Content="Gerente" Margin="261,0,436,63" FontSize="12"/>
-        <Label Content="Profesional" Margin="461,0,212,67" FontSize="12"/>
-        <Label x:Name="nombreGerente"  Content="{Binding nombreGer, TargetNullValue=''}" Margin="214,0,0,0" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Height="36" Width="203" />
-        <Label x:Name="nombreProfesional" Content="{Binding nombreProf, TargetNullValue=''}" Margin="431,0,0,0" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Height="36" Width="199" />
+
         <Rectangle x:Name="cuadro" HorizontalAlignment="Left" Height="55" Margin="699,17,0,0" Stroke="Black" VerticalAlignment="Top" Width="111" Fill="#FFE0E0E0"/>
-        <Label x:Name="horaActividad" Content="{Binding horaAct, TargetNullValue=''}"  Margin="729,16,45,0" Background="{x:Null}" FontSize="20" FontWeight="Normal" FontFamily="Global Sans Serif" VerticalAlignment="Top" Height="28"  />
-        <Label x:Name="lblActividad" Content="{Binding lblAct, TargetNullValue=''}" Margin="718,42,0,0" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Height="29"/>
+
         <Image x:Name="header" Source="/maxresdefault.jpg" Margin="694,-2,19,78" Stretch="Fill" />
+
+        <StackPanel Margin="394,0,233,13" >
+            <Grid Height="84">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="22*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Profesional" Grid.Row="0" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock x:Name="nombreProfesional" Grid.Row="1" Text="{Binding nombreProf, TargetNullValue=''}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="WrapWithOverflow"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="700,17,24,26">
+            <Grid Height="54" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="21*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="horaActividad" Grid.Row="0" Content="{Binding horaAct, TargetNullValue=''}" Background="{x:Null}" FontSize="18" FontWeight="Bold" FontFamily="Global Sans Serif" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label x:Name="lblActividad" Grid.Row="1" Content="{Binding lblAct, TargetNullValue=''}" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="186,0,441,13" >
+            <Grid Height="84">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="22*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="lblGerente" Grid.Row="0" Content="Gerente" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                <Label x:Name="nombreGerente" Grid.Row="1" Content="{Binding nombreGer, TargetNullValue=''}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" />
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="18,0,609,13" >
+            <Grid Height="84">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="Empresa1" Grid.Row="0" Text="{Binding nombreEmp, TargetNullValue=''}" FontSize="26" Height="56" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" Margin="0,6,0,0" Grid.RowSpan="2"/>
+                <TextBlock x:Name="fechaActividad" Grid.Row="1" Text="{Binding fechaAct, TargetNullValue=''}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="30" FontSize="12" TextWrapping="WrapWithOverflow"/>
+            </Grid>
+        </StackPanel>
+
 
     </Grid>
 

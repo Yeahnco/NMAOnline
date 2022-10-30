@@ -11,6 +11,7 @@
           "EntityFramework": "6.2.0",
           "MahApps.Metro": "2.4.9",
           "MahApps.Metro.IconPacks": "4.11.0",
+          "PropertyChanged.Fody": "4.0.5",
           "autosize": "3.0.8"
         },
         "runtime": {
@@ -42,6 +43,7 @@
           }
         }
       },
+      "Fody/6.6.4": {},
       "MahApps.Metro/2.4.9": {
         "dependencies": {
           "ControlzEx": "4.4.0"
@@ -202,6 +204,11 @@
           }
         }
       },
+      "PropertyChanged.Fody/4.0.5": {
+        "dependencies": {
+          "Fody": "6.6.4"
+        }
+      },
       "System.Text.Json/4.7.2": {}
     }
   },
@@ -232,6 +239,13 @@
       "path": "entityframework/6.2.0",
       "hashPath": "entityframework.6.2.0.nupkg.sha512"
     },
+    "Fody/6.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vLZS+oa+ndUHYPlx/8n9bBTT3dHkCF0riml4paKq4D663+cZd47x1uagQo32D/gKFZ/sfmV1oqKaLmH0elxq4A==",
+      "path": "fody/6.6.4",
+      "hashPath": "fody.6.6.4.nupkg.sha512"
+    },
     "MahApps.Metro/2.4.9": {
       "type": "package",
       "serviceable": true,
@@ -252,6 +266,13 @@
       "sha512": "sha512-5sPWkbqImc2t1aQwIfJcKsUo7tOg1Tr8+6xVzZJB56Nzt4u9NlpcLofgdX/aRYpPKdWDA3U23Akw1KQzU5e82g==",
       "path": "microsoft.xaml.behaviors.wpf/1.1.19",
       "hashPath": "microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/4.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D4UXpsUw9kgayfHT8zzwzO2xL7PirJ/xrjX+Fp5x3Og/YDKtvKTMiCx0KGOydqOYXhP0OMyz22kZUMWRujdT0g==",
+      "path": "propertychanged.fody/4.0.5",
+      "hashPath": "propertychanged.fody.4.0.5.nupkg.sha512"
     },
     "System.Text.Json/4.7.2": {
       "type": "package",

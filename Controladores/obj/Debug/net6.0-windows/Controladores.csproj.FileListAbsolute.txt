@@ -46,22 +46,24 @@ C:\Users\jeaaa\Documents\RESPALDO SUPREMO\NMA\Controladores\obj\Debug\net6.0-win
 C:\Users\jeaaa\Documents\RESPALDO SUPREMO\NMA\Controladores\obj\Debug\net6.0-windows\refint\Controladores.dll
 C:\Users\jeaaa\Documents\RESPALDO SUPREMO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.pdb
 C:\Users\jeaaa\Documents\RESPALDO SUPREMO\NMA\Controladores\obj\Debug\net6.0-windows\ref\Controladores.dll
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.csproj.AssemblyReference.cache
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.AssemblyInfoInputs.cache
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.AssemblyInfo.cs
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.csproj.CoreCompileInputs.cache
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.dll
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\refint\Controladores.dll
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.pdb
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\Controladores.dll.config
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\Controladores.deps.json
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\Controladores.runtimeconfig.json
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\Controladores.dll
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\Controladores.pdb
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\PersistenciaBD.dll
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\PersistenciaBD.pdb
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\PersistenciaBD.dll.config
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.csproj.AssemblyReference.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.AssemblyInfoInputs.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.AssemblyInfo.cs
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.csproj.CoreCompileInputs.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.csproj.Fody.CopyLocal.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.csproj.Fody.RuntimeCopyLocal.cache
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.csproj.CopyComplete
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\ref\Controladores.dll
-C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\bin\Debug\net6.0-windows\Controladores.runtimeconfig.json
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.dll
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\refint\Controladores.dll
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.pdb
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\Controladores.genruntimeconfig.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Controladores\obj\Debug\net6.0-windows\ref\Controladores.dll

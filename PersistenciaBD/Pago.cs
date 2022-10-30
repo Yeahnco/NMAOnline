@@ -11,24 +11,20 @@ namespace PersistenciaBD
 {
     using System;
     using System.Collections.Generic;
-    
+    using PropertyChanged;
+
+    [AddINotifyPropertyChangedInterface]
     public partial class Pago
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pago()
-        {
-            this.Plan = new HashSet<Plan>();
-        }
-    
+
         public int id_pago { get; set; }
         public string Estado_pago { get; set; }
         public string Mes_pago { get; set; }
         public decimal Valor_extra { get; set; }
         public decimal Total_a_pagar { get; set; }
         public byte[] Comprobante { get; set; }
-        public int Plan_plan_id { get; set; }
+        public int Plan_id_plan { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Plan> Plan { get; set; }
+        public virtual Plan Plan { get; set; }
     }
 }

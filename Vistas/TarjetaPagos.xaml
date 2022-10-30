@@ -4,35 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Vistas"
-             mc:Ignorable="d" d:DesignWidth="830" Height="195">
-    <Grid>
-        <Grid Margin="0,0,669,98">
-            <Grid Margin="0,0,0,47">
+             mc:Ignorable="d" d:DesignWidth="800" Height="141" Background="White" BorderBrush="Black">
+    <Grid OpacityMask="Black" Margin="2,0,0,0">
+        <Grid Margin="-20,0,669,52">
+            <Grid Margin="0,0,0,33">
                 <Label x:Name="nEmpresa" Content="{Binding nombreEmp, TargetNullValue=''}" Width="154" Height="50" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
             </Grid>
-            <Grid Margin="0,51,0,3">
+            <Grid Margin="0,36,0,3">
                 <Label x:Name="rEmpresa" Content="{Binding rutEmp, TargetNullValue=''}" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" Width="156" Height="43" FontSize="18"/>
             </Grid>
         </Grid>
-        <Grid Margin="176,0,108,147">
-            <Label Content="Estado" HorizontalAlignment="Left" Margin="1,0,0,0" VerticalAlignment="Center" Width="75" FontSize="18"/>
-            <Label Content="Mes" HorizontalAlignment="Left" Margin="99,0,0,0" VerticalAlignment="Center" Width="75" FontSize="18"/>
-            <Label Content="Plan" HorizontalAlignment="Left" Margin="198,0,0,0" VerticalAlignment="Center" Width="75" FontSize="18"/>
-            <Label Content="Valor Plan" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Center" Width="86" FontSize="18"/>
-            <Label Content="Valor Extra" HorizontalAlignment="Left" Margin="367,0,0,0" VerticalAlignment="Center" Width="95" FontSize="18"/>
-            <Label Content="Total" HorizontalAlignment="Left" Margin="468,0,0,0" VerticalAlignment="Center" Width="52" FontSize="18"/>
-        </Grid>
-        <Grid Margin="174,48,94,20">
-            <DataGrid x:Name="dgPagos" HeadersVisibility="None">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Path = EstadoPago, TargetNullValue=''}" Width="100" />
-                    <DataGridTextColumn Binding="{Binding Path = Mes, TargetNullValue=''}" Width="100" />
-                    <DataGridTextColumn Binding="{Binding Path = Plan, TargetNullValue=''}" Width="70"/>
-                    <DataGridTextColumn Binding="{Binding Path= ValorPlan, TargetNullValue=''}" Width="100"/>
-                    <DataGridTextColumn Binding="{Binding Path= ValorExtra, TargetNullValue=''}" Width="100"/>
-                    <DataGridTextColumn Binding="{Binding Path= Total, TargetNullValue=''}" Width="100"/>
+
+        <Grid Margin="127,11,126,20">
+            <DataGrid x:Name="lvPagos" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Hidden" MouseLeftButtonUp="lvPagos_MouseLeftButtonUp">
+                <DataGrid.Columns >
+                    <DataGridTextColumn x:Name="funcionaPo" Header="Estado" Width="80" Binding="{Binding Estado, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Mes" Width="100" Binding="{Binding Mes}" />
+                    <DataGridTextColumn Header="Plan" Width="80" Binding="{Binding Plan}" />
+                    <DataGridTextColumn Header="Valor Plan" Width="94" Binding="{Binding ValorPlan}" />
+                    <DataGridTextColumn Header="Valor Extra" Width="100" Binding="{Binding ValorExtra}" />
+                    <DataGridTextColumn Header="Total" Width="100" Binding="{Binding Total}" />
+                    <DataGridTextColumn Header="idPag" Width="100" Binding="{Binding idPago}" />
+                    <DataGridTextColumn Header="idClien" Width="100" Binding="{Binding idCliente}" />
                 </DataGrid.Columns>
             </DataGrid>
+            
         </Grid>
+        <Rectangle HorizontalAlignment="Center" Height="124" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+        <Button x:Name="btnComprobante" Content="Ver Comprobante" HorizontalAlignment="Left" Margin="691,46,0,0" VerticalAlignment="Top" Width="106" Height="21" FontSize="8" Background="#FF9945E9" Foreground="White" Click="btnComprobante_Click"/>
+        <Image Margin="-2,115,-9,-5" Source="/pngegg.png" Stretch="Fill"/>
+        <Button Content="Generar PDF" HorizontalAlignment="Left" Margin="706,77,0,0" VerticalAlignment="Top" Height="11" Width="81" BorderBrush="#FF9945E9" Foreground="#FF9945E9" Background="{x:Null}" FontSize="8"/>
+        <Button x:Name="btnCambiarEsPag" Visibility="Visible" Content="Cambiar estado pago" HorizontalAlignment="Left" VerticalAlignment="Top" Height="13" Width="82" BorderBrush="#FF9945E9" Foreground="#FF9945E9" Background="{x:Null}" FontSize="6" Margin="16,91,0,0" Click="btnCambiarEsPag_Click"/>
     </Grid>
 </UserControl>

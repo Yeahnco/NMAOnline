@@ -24,7 +24,6 @@ namespace PersistenciaBD
         public int id_gerente { get; set; }
         public string Nombre_gerente { get; set; }
         public Nullable<int> Fono_cliente { get; set; }
-        public string Direccion_cliente { get; set; }
         public string Mail_cliente { get; set; }
         public Nullable<int> Contrato_id_contrato { get; set; }
         public Nullable<int> Cliente_id_clien { get; set; }

@@ -13,6 +13,12 @@
     <Compile Update="TarjetaActividades.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TarjetaPagos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TarjetaProfesionales.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Administrador.xaml">
@@ -22,6 +28,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TarjetaActividades.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TarjetaPagos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TarjetaProfesionales.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -6,7 +6,10 @@ C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\bin\Debug\E
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\bin\Debug\EntityFramework.xml
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.AssemblyReference.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\obj\Debug\PersistenciaBD.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.CoreCompileInputs.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.Fody.CopyLocal.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.Fody.RuntimeCopyLocal.cache
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\obj\Debug\PersistenciaBD.csproj.CopyComplete
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\obj\Debug\PersistenciaBD.dll
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\PersistenciaBD\obj\Debug\PersistenciaBD.pdb

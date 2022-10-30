@@ -4,25 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eb25e026c061485da60969ea87fb0cf9" Name="Diagram1">
-        <EntityTypeShape EntityType="BD_NMAModel.Actividad" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Administrador" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Alerta" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Checklist" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Cliente" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Contrato" Width="1.5" PointX="7.5" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Gerente" Width="1.5" PointX="5.25" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Pago" Width="1.5" PointX="7.5" PointY="28.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Plan" Width="1.5" PointX="9.75" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Profesional" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Solicitud" Width="1.5" PointX="7.5" PointY="25.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Accidente" Width="1.5" PointX="7.5" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Act_de_mejora" Width="1.5" PointX="7.5" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Asesoria" Width="1.5" PointX="7.5" PointY="15" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Capacitacion" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
+      <Diagram DiagramId="bfff57b7d8274f37a984a7361fda28f5" Name="Diagram1">
+        <EntityTypeShape EntityType="BD_NMAModel.Actividad" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Administrador" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Alerta" Width="1.5" PointX="5.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Checklist" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Cliente" Width="1.5" PointX="3" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Contrato" Width="1.5" PointX="7.5" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Gerente" Width="1.5" PointX="5.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Pago" Width="1.5" PointX="12" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Plan" Width="1.5" PointX="9.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Profesional" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Solicitud" Width="1.5" PointX="7.5" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Usuarios" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Accidente" Width="1.5" PointX="7.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Act_de_mejora" Width="1.5" PointX="7.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Asesoria" Width="1.5" PointX="7.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Capacitacion" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BD_NMAModel.ERROR_LOG" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_NMAModel.Visita" Width="1.5" PointX="10.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Visita" Width="1.5" PointX="10.5" PointY="15" IsExpanded="true" />
         <AssociationConnector Association="BD_NMAModel.FK_Act_de_mejora_Actividad" ManuallyRouted="false" />
         <AssociationConnector Association="BD_NMAModel.FK_Actividad_Cliente1" ManuallyRouted="false" />
         <AssociationConnector Association="BD_NMAModel.FK_Actividad_Profesional" ManuallyRouted="false" />
@@ -38,7 +38,7 @@
         <AssociationConnector Association="BD_NMAModel.FK_Contrato_Gerente" ManuallyRouted="false" />
         <AssociationConnector Association="BD_NMAModel.FK_Plan_Contrato" ManuallyRouted="false" />
         <AssociationConnector Association="BD_NMAModel.FK_Solicitud_Gerente" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_NMAModel.FK_Plan_Pago" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Pago_Plan" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

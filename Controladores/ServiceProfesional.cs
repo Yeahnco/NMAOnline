@@ -8,7 +8,7 @@ using PersistenciaBD;
 namespace Controladores
 {
     public class ServiceProfesional : AbstractService<Profesional>
-    {
+    { 
         public override List<Profesional> GetEntities()
         {
             return nmaEn.Profesional.ToList<Profesional>();

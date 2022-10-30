@@ -22,7 +22,7 @@ namespace PersistenciaBD
     
         public int id_contrato { get; set; }
         public System.DateTime Vencimiento_cont { get; set; }
-        public byte[] Archivo_pdf { get; set; }
+        public string Archivo_pdf { get; set; }
         public int Gerente_id_gerente { get; set; }
     
         public virtual Gerente Gerente { get; set; }

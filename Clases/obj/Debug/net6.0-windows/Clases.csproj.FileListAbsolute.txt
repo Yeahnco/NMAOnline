@@ -54,6 +54,8 @@ C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-wi
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-windows\Clases.AssemblyInfoInputs.cache
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-windows\Clases.AssemblyInfo.cs
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-windows\Clases.csproj.CoreCompileInputs.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-windows\Clases.csproj.Fody.CopyLocal.cache
+C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-windows\Clases.csproj.Fody.RuntimeCopyLocal.cache
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-windows\Clases.dll
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-windows\refint\Clases.dll
 C:\Users\jeaaa\Documents\PROYECTO DE TITULO BUENO\NMA\Clases\obj\Debug\net6.0-windows\Clases.pdb

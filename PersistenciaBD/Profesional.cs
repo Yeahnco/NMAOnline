@@ -24,12 +24,14 @@ namespace PersistenciaBD
     
         public int id_prof { get; set; }
         public string Rut_prof { get; set; }
-        public string Dv_rut_prof { get; set; }
         public string Nombre_prof { get; set; }
+        public string Apellido_prof { get; set; }
         public int Rendimiento_prof { get; set; }
         public string Estado_prof { get; set; }
         public System.DateTime Fecha_nacimiento_prof { get; set; }
         public string Mail_prof { get; set; }
+        public string Telefono { get; set; }
+        public string Direccion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Actividad> Actividad { get; set; }
